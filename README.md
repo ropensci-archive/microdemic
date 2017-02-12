@@ -1,14 +1,7 @@
 microdemic
 ==========
 
-```{r echo=FALSE}
-knitr::opts_chunk$set(
-  warning = FALSE,
-  message = FALSE,
-  collapse = TRUE,
-  comment = "#>"
-)
-```
+
 
 [![Build Status](https://api.travis-ci.org/ropenscilabs/microdemic.png?branch=master)](https://travis-ci.org/ropenscilabs/microdemic)
 
@@ -16,11 +9,13 @@ knitr::opts_chunk$set(
 
 ## install
 
-```{r eval=FALSE}
+
+```r
 devtools::install_github("ropenscilabs/microdemic")
 ```
 
-```{r}
+
+```r
 library("microdemic")
 ```
 
