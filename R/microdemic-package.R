@@ -21,7 +21,7 @@
 #'
 #' @section Rate limits:
 #'
-#' * 10,000 transactions
+#' * 10,000 transactions per day
 #' * 3 per second for interpret
 #' * 1 per second for evaluate
 #' * 6 per minute for calcHistogram
