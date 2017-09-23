@@ -2,14 +2,50 @@
 % Please edit documentation in R/microdemic-package.R
 \docType{package}
 \name{microdemic-package}
-\alias{microdemic}
 \alias{microdemic-package}
+\alias{microdemic}
 \title{Microsoft Academic Client}
 \description{
 Microsoft Academic Client
 }
+\section{Links}{
+
+\itemize{
+\item web interface: \url{https://academic.microsoft.com/}
+\item API docs: \url{https://www.microsoft.com/cognitive-services/en-us/Academic-Knowledge-API/documentation/overview}
+}
+}
+
+\section{Package API}{
+
+\itemize{
+\item \code{\link[=ma_search]{ma_search()}}
+\item \code{\link[=ma_calchist]{ma_calchist()}}
+\item \code{\link[=ma_evaluate]{ma_evaluate()}}
+\item \code{\link[=ma_interpret]{ma_interpret()}}
+\item \code{\link[=ma_similarity]{ma_similarity()}}
+\item \code{\link[=ma_abstract]{ma_abstract()}}
+\item \code{\link[=ma_graph_search]{ma_graph_search()}}
+}
+}
+
+\section{Authentication}{
+
+See \url{https://azure.microsoft.com/en-us/try/cognitive-services/} to get
+an API key
+}
+
+\section{Rate limits}{
+
+\itemize{
+\item 10,000 transactions
+\item 3 per second for interpret
+\item 1 per second for evaluate
+\item 6 per minute for calcHisogram
+}
+}
+
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
 \keyword{package}
-

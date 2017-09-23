@@ -3,6 +3,7 @@
 export(ma_abstract)
 export(ma_calchist)
 export(ma_evaluate)
+export(ma_graph_search)
 export(ma_interpret)
 export(ma_search)
 export(ma_similarity)

@@ -4,25 +4,39 @@
 \alias{ma_interpret}
 \title{Interpret API}
 \usage{
-ma_interpret(query, count = 10, complete = TRUE, key, ...)
+ma_interpret(query, count = 10, offset = 0, complete = TRUE, key = NULL,
+  ...)
 }
 \arguments{
 \item{query}{(character) query terms}
 
 \item{count}{(intger) number of records to return. default: 10}
 
-\item{complete}{(logical) record to start at. default: 0}
+\item{offset}{(intger) record number to start at. default: 0}
+
+\item{complete}{(logical) \code{TRUE} means that auto-completion suggestions
+are generated based on the grammar and graph data. default: \code{TRUE}}
 
 \item{key}{(character) microsoft academic API key, see Details.}
 
-\item{offset}{(intger) record number to start at. default: 0}
+\item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \description{
 Interpret API
 }
 \examples{
 \dontrun{
-ma_interpret(query = "Ti='biology'...")
-}
-}
+res <- ma_interpret(query = "papers by jaime'...")
+res$query
+res$interpretations
+res$interpretations$parse
+res$interpretations$rules
+res$interpretations$rules[[1]]
 
+expr <- res$interpretations$rules[[1]]$output.value
+ma_evaluate(expr)
+}
+}
+\references{
+\url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/interpretmethod}
+}

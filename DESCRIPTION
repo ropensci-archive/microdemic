@@ -1,21 +1,23 @@
 Package: microdemic
 Type: Package
-Title: Microsoft Academic Client
-Description: Microsoft Academic API client. Includes methods matching
-    all Microsoft Academic API routes, and higher level methods
+Title: Microsoft Academic 'API' Client
+Description: Microsoft Academic 'API' client. Includes methods matching
+    all Microsoft Academic 'API' routes, and higher level methods
     to make certain use cases easier.
-Version: 0.0.1.9100
+Version: 0.0.3.9110
 Authors@R: person("Scott", "Chamberlain", email = "myrmecocystus@gmail.com",
     role = c("aut", "cre"))
 License: MIT + file LICENSE
 LazyData: TRUE
-URL: https://github.com/ropensci/microdemic
-BugReports: https://github.com/ropensci/microdemic/issues
+URL: https://github.com/ropenscilabs/microdemic
+BugReports: https://github.com/ropenscilabs/microdemic/issues
+Roxygen: list(markdown = TRUE)
 Imports:
     crul (>= 0.2.0),
-    jsonlite (>= 1.2)
+    jsonlite (>= 1.2),
+    data.table,
+    tibble
 Suggests:
-    roxygen2 (>= 5.0.1),
-    testthat,
-    covr
-RoxygenNote: 5.0.1
+    roxygen2 (>= 6.0.1),
+    testthat
+RoxygenNote: 6.0.1

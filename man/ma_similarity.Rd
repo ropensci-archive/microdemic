@@ -4,17 +4,32 @@
 \alias{ma_similarity}
 \title{Similarity API}
 \usage{
-ma_similarity()
+ma_similarity(s1, s2, method = "GET", key = NULL, ...)
 }
 \arguments{
-\item{key}{(character) microsoft academic API key, see Details.}
+\item{s1, s2}{(character) strings 1 and 2. required}
+
+\item{method}{(character) one of GET (default) or POST}
+
+\item{key}{(character) microsoft academic API key, see \link{microdemic}}
+
+\item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \description{
 Similarity API
 }
 \examples{
 \dontrun{
-ma_similarity(query = "Ti='biology'...")
-}
-}
+s1 <- "Using complementary priors, we derive a fast greedy algorithm that
+can learn deep directed belief networks one layer at a time, provided the
+top two layers form an undirected associative memory"
 
+s2 <- "Deepneural nets with a large number of parameters are very powerful
+machine learning systems. However, overfitting is a serious problem in
+such networks"
+
+ma_similarity(s1, s2)
+
+ma_similarity(s1, s2, method = "POST")
+}
+}

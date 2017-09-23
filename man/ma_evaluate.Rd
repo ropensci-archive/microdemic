@@ -2,7 +2,7 @@
 % Please edit documentation in R/evaluate.R
 \name{ma_evaluate}
 \alias{ma_evaluate}
-\title{Interpret API}
+\title{Evaluate API}
 \usage{
 ma_evaluate(query, count = 10, offset = 0, orderby = NULL,
   atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"), key = NULL, ...)
@@ -17,18 +17,33 @@ ma_evaluate(query, count = 10, offset = 0, orderby = NULL,
 \item{orderby}{(logical) column by which to order. default: none}
 
 \item{atts}{(character) fields to return, in a character vector. See
-XX for details.}
+\url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/entityattributes}
+for details.}
 
 \item{key}{(character) microsoft academic API key, see Details.}
 
-\item{complete}{(logical) record to start at. default: 0}
+\item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
+}
+\value{
+a list of length two, with \code{expr} (character) and
+\code{entities} (data.frame)
 }
 \description{
-Interpret API
+Evaluate API
 }
 \examples{
 \dontrun{
 ma_evaluate(query = "Ti='biology'...")
+ma_evaluate(query = "Composite(AA.AuN=='jaime teevan')",
+  atts = c('Id', 'AA.AuN'))
+ma_evaluate(query = "Y=2010", atts = c('Id', 'Y'))
+ma_evaluate(query = "Y=[2010, 2012)", atts = c('Id', 'Y'))
+ma_evaluate(query = "D=['2010-02-03','2010-02-05']", atts = c('Id', 'Y'))
+x <- "Composite(And(AA.AuN='mike smith',AA.AfN='harvard university'))"
+ma_evaluate(x)
 }
 }
-
+\references{
+Query expression syntax
+https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/queryexpressionsyntax
+}

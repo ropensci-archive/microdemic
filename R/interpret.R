@@ -1,17 +1,25 @@
 #' Interpret API
 #'
 #' @export
-#' @param query (character) query terms
-#' @param count (intger) number of records to return. default: 10
-#' @param offset (intger) record number to start at. default: 0
-#' @param complete (logical) record to start at. default: 0
-#' @param key (character) microsoft academic API key, see Details.
+#' @inheritParams ma_evaluate
+#' @param complete (logical) `TRUE` means that auto-completion suggestions
+#' are generated based on the grammar and graph data. default: `TRUE`
+#' @references <https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/interpretmethod>
 #' @examples \dontrun{
-#' ma_interpret(query = "Ti='biology'...")
+#' res <- ma_interpret(query = "papers by jaime'...")
+#' res$query
+#' res$interpretations
+#' res$interpretations$parse
+#' res$interpretations$rules
+#' res$interpretations$rules[[1]]
+#'
+#' expr <- res$interpretations$rules[[1]]$output.value
+#' ma_evaluate(expr)
 #' }
-ma_interpret <- function(query, count = 10, complete = TRUE, key, ...) {
-  compolete <- if (complete) 1 else 0
+ma_interpret <- function(query, count = 10, offset = 0, complete = TRUE,
+                         key = NULL, ...) {
+  complete <- if (complete) 1 else 0
   args <- comp(list(query = query, complete = complete, count = count,
                offset = offset, model = "latest"))
-  ma_GET("interpret", args, key, ...)
+  ma_HTTP("academic/v1.0/interpret", args, key, ...)
 }

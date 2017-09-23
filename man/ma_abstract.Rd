@@ -2,19 +2,30 @@
 % Please edit documentation in R/abstract.R
 \name{ma_abstract}
 \alias{ma_abstract}
-\title{Abstracts}
+\title{Fetch abstracts}
 \usage{
-ma_abstract(query, key = NULL, ...)
+ma_abstract(query, count = 10, offset = 0, orderby = NULL, key = NULL,
+  ...)
 }
 \arguments{
+\item{query}{(character) query terms}
+
+\item{count}{(intger) number of records to return. default: 10}
+
+\item{offset}{(intger) record number to start at. default: 0}
+
+\item{orderby}{(logical) column by which to order. default: none}
+
 \item{key}{(character) microsoft academic API key, see Details.}
+
+\item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \description{
-Abstracts
+Fetch abstracts
 }
 \examples{
 \dontrun{
-ma_abstract(query = "Ti='biology'...")
+ma_abstract(query = "Ti='biology'...", count = 10)
+ma_abstract(query = "Ti='ecology'...", count = 10)
 }
 }
-

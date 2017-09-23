@@ -4,17 +4,31 @@
 \alias{ma_calchist}
 \title{CalcHistogram API}
 \usage{
-ma_calchist()
+ma_calchist(query, count = 10, offset = 0, atts = c("Id", "AA.AuN",
+  "J.JN", "Ti", "Y", "E", "CC"), key = NULL, ...)
 }
 \arguments{
+\item{query}{(character) query terms}
+
+\item{count}{(intger) number of records to return. default: 10}
+
+\item{offset}{(intger) record number to start at. default: 0}
+
+\item{atts}{(character) fields to return, in a character vector. See
+\url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/entityattributes}
+for details.}
+
 \item{key}{(character) microsoft academic API key, see Details.}
+
+\item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \description{
 CalcHistogram API
 }
 \examples{
 \dontrun{
-ma_calchist(query = "Ti='biology'...")
+res <- ma_calchist(query = "And(Composite(AA.AuN=='jaime teevan'),Y>2012)",
+  atts = c('Y', 'F.FN'))
+res$histograms$histogram
 }
 }
-

@@ -12,25 +12,30 @@ ma_search(query, count = 10, offset = 0, orderby = NULL, atts = c("Id",
 
 \item{count}{(intger) number of records to return. default: 10}
 
-\item{offset}{(intger) record to start at. default: 0}
+\item{offset}{(intger) record number to start at. default: 0}
 
-\item{orderby}{(character) field to sort results by}
+\item{orderby}{(logical) column by which to order. default: none}
 
-\item{atts}{(character) character vector of fields to return}
+\item{atts}{(character) fields to return, in a character vector. See
+\url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/entityattributes}
+for details.}
 
 \item{key}{(character) microsoft academic API key, see Details.}
+
+\item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \description{
 Search - higher level method
 }
 \examples{
 \dontrun{
-microsoft_search(query = "Ti='biology'...")
+ma_search(query = "Ti='biology'...")
 }
 }
 \references{
 https://academic.microsoft.com/
-https://www.microsoft.com/cognitive-services/en-us/Academic-Knowledge-API/documentation/QueryExpressionSyntax
+https://azure.microsoft.com/en-us/services/cognitive-services/academic-knowledge/
+https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/home
+https://westus.dev.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d9001ca73072048922d97
 https://westus.dev.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d753be597ed16ac3ffc03
 }
-
