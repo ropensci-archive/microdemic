@@ -20,6 +20,14 @@ Get a API key at <https://azure.microsoft.com/en-us/try/cognitive-services/>
 
 ## install
 
+cran version
+
+```{r eval=FALSE}
+install.packages("microdemic")
+```
+
+dev version
+
 ```{r eval=FALSE}
 devtools::install_github("ropenscilabs/microdemic")
 ```
@@ -28,29 +36,33 @@ devtools::install_github("ropenscilabs/microdemic")
 library("microdemic")
 ```
 
-## Authentication
+## Interpret
 
-...
+```{r}
+res <- ma_interpret(query = "papers by jaime'...")
+(expr <- res$interpretations$rules[[1]]$output.value)
+```
 
-## Methods matching API routes
+## Evaluate
 
-### Interpret
+```{r}
+ma_evaluate(expr)
+```
 
-...
+or go to evalulate directly
 
-### Evaluate
+```{r}
+ma_evaluate(query = "Ti='biology'...")
+```
 
-...
+## Calchistogram
 
-### Calchistogram
+```{r}
+res <- ma_calchist(query = "And(Composite(AA.AuN=='jaime teevan'),Y>2012)",
+   atts = c('Y', 'F.FN'))
+res$histograms$histogram
+```
 
-...
-
-## Higher level methods
-
-### Search
-
-...
 
 ## Meta
 
