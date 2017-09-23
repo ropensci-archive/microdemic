@@ -2,6 +2,7 @@ context("ma_similarity")
 
 test_that("ma_similarity works as expected", {
   skip_on_cran()
+  Sys.sleep(1)
 
   s1 <- "Using complementary priors, we derive a fast greedy algorithm that
 	can learn deep directed belief networks one layer at a time, provided the

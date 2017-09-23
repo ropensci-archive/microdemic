@@ -2,6 +2,7 @@ context("ma_search")
 
 test_that("ma_search works as expected", {
   skip_on_cran()
+  Sys.sleep(1)
 
   aa <- ma_search(query = "Ti='biology'...")
 

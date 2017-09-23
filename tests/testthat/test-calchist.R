@@ -2,6 +2,7 @@ context("ma_calchist")
 
 test_that("ma_calchist works as expected", {
   skip_on_cran()
+  Sys.sleep(1)
 
   aa <- ma_calchist(query = "And(Composite(AA.AuN=='jaime teevan'),Y>2012)",
      atts = c('Y', 'F.FN'))

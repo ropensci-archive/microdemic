@@ -2,6 +2,7 @@ context("ma_interpret")
 
 test_that("ma_interpret works as expected", {
   skip_on_cran()
+  Sys.sleep(1)
 
   aa <- ma_interpret(query = "papers by jaime'...")
 

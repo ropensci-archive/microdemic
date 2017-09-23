@@ -2,6 +2,7 @@ context("ma_graph_search")
 
 test_that("ma_graph_search works as expected", {
   skip_on_cran()
+  Sys.sleep(1)
 
   x <- '{
   "path": "/paper/AuthorIDs/author",
