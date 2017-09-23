@@ -1,9 +1,10 @@
 microdemic
 ==========
 
-
-
-[![Build Status](https://api.travis-ci.org/ropenscilabs/microdemic.png?branch=master)](https://travis-ci.org/ropenscilabs/microdemic)
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
+[![Build Status](https://travis-ci.org/ropenscilabs/microdemic.svg?branch=master)](https://travis-ci.org/ropenscilabs/microdemic)
+[![codecov](https://codecov.io/gh/ropenscilabs/microdemic/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/microdemic)
+[![cran version](https://www.r-pkg.org/badges/version/microdemic)](https://cran.r-project.org/package=microdemic)
 
 `microdemic` - Microsoft Academic Client
 
