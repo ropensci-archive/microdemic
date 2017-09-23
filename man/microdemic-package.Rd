@@ -41,7 +41,7 @@ an API key
 \item 10,000 transactions
 \item 3 per second for interpret
 \item 1 per second for evaluate
-\item 6 per minute for calcHisogram
+\item 6 per minute for calcHistogram
 }
 }
 

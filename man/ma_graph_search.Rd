@@ -25,15 +25,10 @@ x <- '{
  "paper": {
    "type": "Paper",
    "NormalizedTitle": "graph engine",
-   "select": [
-     "OriginalTitle"
-     ]
+   "select": [ "OriginalTitle" ]
  },
  "author": {
-   "return": {
-     "type": "Author",
-     "Name": "bin shao"
-   }
+   "return": { "type": "Author", "Name": "bin shao" }
  }
 }'
 
