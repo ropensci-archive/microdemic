@@ -5,7 +5,7 @@ Description: Microsoft Academic 'API' client. Includes methods matching
     all Microsoft Academic 'API' routes, and higher level methods
     to make certain use cases easier.
 Version: 0.1.0
-Authors@R: person("Scott", "Chamberlain", email = "myrmecocystus@gmail.com",
+Authors@R: person("Scott", "Chamberlain", email = "myrmecocystus+r@gmail.com",
     role = c("aut", "cre"))
 License: MIT + file LICENSE
 LazyData: TRUE
