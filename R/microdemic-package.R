@@ -24,7 +24,7 @@
 #' * 10,000 transactions
 #' * 3 per second for interpret
 #' * 1 per second for evaluate
-#' * 6 per minute for calcHisogram
+#' * 6 per minute for calcHistogram
 #'
 #' @name microdemic-package
 #' @aliases microdemic
