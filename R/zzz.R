@@ -2,15 +2,16 @@ comp <- function(x) Filter(Negate(is.null), x)
 
 ma_base <- function() "https://westus.api.cognitive.microsoft.com"
 
-ma_HTTP <- function(path, args, key, method = "GET", body = list(), encode = "form", ...) {
+ma_HTTP <- function(path, args, key, method = "GET", body = list(),
+                    encode = "form", ctype = NULL, ...) {
   key <- check_key(key)
   cli <- crul::HttpClient$new(
     url = ma_base(),
     headers = list(
-      `Ocp-Apim-Subscription-Key` = key,
-      `Content-Type` = "application/json"
+      `Ocp-Apim-Subscription-Key` = key
     )
   )
+  if (!is.null(ctype)) cli$headers <- c(cli$headers, `Content-Type` = ctype)
   res <- switch(
     method,
     GET = cli$get(path, query = args, ...),

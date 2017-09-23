@@ -25,6 +25,7 @@ ma_similarity <- function(s1, s2, method = "GET", key = NULL, ...) {
     ma_HTTP("academic/v1.0/similarity", args, key, ...)
   } else {
     args <- sprintf("s1=%s&s2=%s", s1, s2)
-    ma_HTTP("academic/v1.0/similarity", key, 'POST', body = args, ...)
+    ma_HTTP("academic/v1.0/similarity", NULL, key = key,
+            method = 'POST', body = args, ...)
   }
 }

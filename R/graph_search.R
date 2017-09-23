@@ -33,5 +33,5 @@ ma_graph_search <- function(query, mode = "json", key = NULL, ...) {
 
   args <- comp(list(mode = mode))
   ma_HTTP("academic/v1.0/graph/search", args, key, "POST",
-          query, encode = "json", ...)
+          query, encode = "json", ctype = "application/json", ...)
 }
