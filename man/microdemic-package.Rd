@@ -38,7 +38,7 @@ an API key
 \section{Rate limits}{
 
 \itemize{
-\item 10,000 transactions
+\item 10,000 transactions per day
 \item 3 per second for interpret
 \item 1 per second for evaluate
 \item 6 per minute for calcHistogram
