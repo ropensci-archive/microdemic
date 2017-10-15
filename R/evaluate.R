@@ -15,12 +15,18 @@
 #' @references Query expression syntax
 #' https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/queryexpressionsyntax
 #' @examples \dontrun{
-#' ma_evaluate(query = "Ti='biology'...")
-#' ma_evaluate(query = "Composite(AA.AuN=='jaime teevan')",
+#' # any numeric value that starts with 19
+#' ma_evaluate(query = "Y='19'...")
+#' # author name matching, and request certain fields back
+#' ma_evaluate(query = "Composite(AA.AuN=='smith')",
 #'   atts = c('Id', 'AA.AuN'))
+#' # matching year 2010 and request Id and Y fields
 #' ma_evaluate(query = "Y=2010", atts = c('Id', 'Y'))
+#' # range of years: includes only left boundary value: 2010, 2012
 #' ma_evaluate(query = "Y=[2010, 2012)", atts = c('Id', 'Y'))
+#' # range by specific dates
 #' ma_evaluate(query = "D=['2010-02-03','2010-02-05']", atts = c('Id', 'Y'))
+#' # matching author and matching affiliation
 #' x <- "Composite(And(AA.AuN='mike smith',AA.AfN='harvard university'))"
 #' ma_evaluate(x)
 #' }

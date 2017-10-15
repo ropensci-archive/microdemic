@@ -29,7 +29,7 @@ Search - higher level method
 }
 \examples{
 \dontrun{
-ma_search(query = "Ti='biology'...")
+ma_search(query = "Y='19'...")
 }
 }
 \references{
