@@ -6,7 +6,7 @@ Description: The 'Microsoft Academic Knowledge' API provides programmatic access
 		(<https://academic.microsoft.com/>). Includes methods matching all 'Microsoft
 		Academic' API routes, including search, graph search, text similarity, and
 		interpret natural language query string.
-Version: 0.1.9.9119
+Version: 0.2.0
 Authors@R: person("Scott", "Chamberlain", email = "myrmecocystus+r@gmail.com",
     role = c("aut", "cre"))
 License: MIT + file LICENSE
@@ -15,11 +15,10 @@ URL: https://github.com/ropenscilabs/microdemic
 BugReports: https://github.com/ropenscilabs/microdemic/issues
 Roxygen: list(markdown = TRUE)
 Imports:
-    crul (>= 0.2.0),
-    jsonlite (>= 1.2),
+    crul (>= 0.4.0),
+    jsonlite (>= 1.5),
     data.table,
     tibble
 Suggests:
-    roxygen2 (>= 6.0.1),
     testthat
 RoxygenNote: 6.0.1

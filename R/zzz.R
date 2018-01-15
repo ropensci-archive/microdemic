@@ -11,7 +11,6 @@ ma_HTTP <- function(path, args, key, method = "GET", body = list(),
       `Ocp-Apim-Subscription-Key` = key
     )
   )
-  #if (method == "POST") cli$headers$`Content-Type` <- "application/x-www-form-urlencoded"
   if (!is.null(ctype)) cli$headers <- c(cli$headers, `Content-Type` = ctype)
   res <- switch(
     method,
