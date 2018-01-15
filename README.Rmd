@@ -55,7 +55,7 @@ ma_evaluate(expr)
 or go to evalulate directly
 
 ```{r}
-ma_evaluate(query = "Ti='biology'...")
+ma_evaluate(query = "Y='19'...")
 ```
 
 ## Calchistogram
@@ -81,7 +81,8 @@ ma_similarity(s1, s2)
 ## Abstract
 
 ```{r}
-ma_abstract(query = "Ti='biology'...", count = 3)
+res <- ma_abstract(query = "Y='19'...", count = 5)
+Filter(nzchar, res)
 ```
 
 ## Graph search
