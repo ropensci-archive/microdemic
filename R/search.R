@@ -13,10 +13,10 @@
 #' }
 ma_search <- function(query, count = 10, offset = 0, orderby = NULL,
                       atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"),
-                      key = NULL, ...) {
+                      model = "latest", key = NULL, ...) {
 
   if (!is.null(atts)) atts <- paste0(atts, collapse = ",")
-  out <- ma_evaluate(query, count, offset, orderby, atts, key, ...)
+  out <- ma_evaluate(query, count, offset, orderby, atts, model, key, ...)
   ee <- dfrbl(lapply(out$E, function(z) {
     dat <- jsonlite::fromJSON(z)
     dat <- dat[names(dat) %in% c('DN', 'VFN', 'DOI', 'D')]

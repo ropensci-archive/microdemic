@@ -8,6 +8,8 @@
 #' @param atts (character) fields to return, in a character vector. See
 #' <https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/entityattributes>
 #' for details.
+#' @param model (character) Name of the model that you wish to query. One of 'latest' 
+#' or 'beta-2015'. Default: latest
 #' @param key (character) microsoft academic API key, see Details.
 #' @param ... curl options passed on to [crul::HttpClient]
 #' @return a list of length two, with `expr` (character) and
@@ -31,11 +33,16 @@
 #' ma_evaluate(x)
 #' }
 ma_evaluate <- function(query, count = 10, offset = 0, orderby = NULL,
-  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"), key = NULL, ...) {
+  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"), model = "latest", 
+  key = NULL, ...) {
 
+  assert(model, "character")
+  if (!model %in% c('latest', 'beta-2015')) {
+    stop("model must be one or 'latest' or 'beta-2015'")
+  }
   if (!is.null(atts)) atts <- paste0(atts, collapse = ",")
   args <- comp(list(expr = query, count = count, offset = offset,
-                          orderby = orderby, attributes = atts))
+    orderby = orderby, attributes = atts, model = model))
   tibble::as_tibble(
     ma_HTTP("academic/v1.0/evaluate", args, key, ...)$entities
   )

@@ -4,8 +4,8 @@
 \alias{ma_abstract}
 \title{Fetch abstracts}
 \usage{
-ma_abstract(query, count = 10, offset = 0, orderby = NULL, key = NULL,
-  ...)
+ma_abstract(query, count = 10, offset = 0, orderby = NULL,
+  model = "latest", key = NULL, ...)
 }
 \arguments{
 \item{query}{(character) query terms}
@@ -15,6 +15,9 @@ ma_abstract(query, count = 10, offset = 0, orderby = NULL, key = NULL,
 \item{offset}{(intger) record number to start at. default: 0}
 
 \item{orderby}{(logical) column by which to order. default: none}
+
+\item{model}{(character) Name of the model that you wish to query. One of 'latest'
+or 'beta-2015'. Default: latest}
 
 \item{key}{(character) microsoft academic API key, see Details.}
 

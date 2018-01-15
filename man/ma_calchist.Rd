@@ -5,7 +5,7 @@
 \title{CalcHistogram API}
 \usage{
 ma_calchist(query, count = 10, offset = 0, atts = c("Id", "AA.AuN",
-  "J.JN", "Ti", "Y", "E", "CC"), key = NULL, ...)
+  "J.JN", "Ti", "Y", "E", "CC"), model = "latest", key = NULL, ...)
 }
 \arguments{
 \item{query}{(character) query terms}
@@ -17,6 +17,9 @@ ma_calchist(query, count = 10, offset = 0, atts = c("Id", "AA.AuN",
 \item{atts}{(character) fields to return, in a character vector. See
 \url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/entityattributes}
 for details.}
+
+\item{model}{(character) Name of the model that you wish to query. One of 'latest'
+or 'beta-2015'. Default: latest}
 
 \item{key}{(character) microsoft academic API key, see Details.}
 
