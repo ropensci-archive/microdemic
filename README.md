@@ -4,8 +4,8 @@ microdemic
 
 
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
-[![Build Status](https://travis-ci.org/ropenscilabs/microdemic.svg?branch=master)](https://travis-ci.org/ropenscilabs/microdemic)
-[![codecov](https://codecov.io/gh/ropenscilabs/microdemic/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/microdemic)
+[![Build Status](https://travis-ci.org/ropensci/microdemic.svg?branch=master)](https://travis-ci.org/ropensci/microdemic)
+[![codecov](https://codecov.io/gh/ropensci/microdemic/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/microdemic)
 [![cran version](https://www.r-pkg.org/badges/version/microdemic)](https://cran.r-project.org/package=microdemic)
 
 `microdemic` - Microsoft Academic Client
@@ -27,7 +27,7 @@ dev version
 
 
 ```r
-devtools::install_github("ropenscilabs/microdemic")
+devtools::install_github("ropensci/microdemic")
 ```
 
 
@@ -169,7 +169,7 @@ ma_graph_search(query = x)
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropenscilabs/microdemic/issues).
+* Please [report any issues or bugs](https://github.com/ropensci/microdemic/issues).
 * License: MIT
 * Get citation information for `microdemic` in R doing `citation(package = 'microdemic')`
 * Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
