@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 notes.md
+revdep/checks.noindex
+revdep/data.sqlite
+revdep/library.noindex

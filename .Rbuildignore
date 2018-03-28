@@ -7,3 +7,4 @@ cran-comments.md
 notes.md
 ^codemeta\.json$
 .github
+^revdep$
