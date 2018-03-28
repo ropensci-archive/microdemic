@@ -1,6 +1,6 @@
 comp <- function(x) Filter(Negate(is.null), x)
 
-ma_base <- function() "https://westus.api.cognitive.microsoft.com"
+ma_base <- function() "https://api.labs.cognitive.microsoft.com"
 
 ma_HTTP <- function(path, args, key, method = "GET", body = list(),
                     encode = "form", ctype = NULL, ...) {
