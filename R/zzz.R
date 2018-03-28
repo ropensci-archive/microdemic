@@ -28,7 +28,7 @@ check_key <- function(x) {
   } else {
     x <- Sys.getenv("MICROSOFT_ACADEMIC_KEY", "")
     if (nchar(x) == 0) {
-      stop("API key needed for Microsoft Academic")
+      stop("API key needed for Microsoft Academic, see ?microdemic-package")
     } else {
       return(x)
     }
