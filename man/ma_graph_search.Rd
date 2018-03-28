@@ -11,7 +11,8 @@ ma_graph_search(query, mode = "json", key = NULL, ...)
 
 \item{mode}{(character) json (default) or lambda}
 
-\item{key}{(character) microsoft academic API key, see Details.}
+\item{key}{(character) microsoft academic API key, see the \code{Authentication}
+section in \link{microdemic-package}}
 
 \item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }

@@ -12,7 +12,7 @@ Microsoft Academic Client
 
 \itemize{
 \item web interface: \url{https://academic.microsoft.com/}
-\item API docs: \url{https://www.microsoft.com/cognitive-services/en-us/Academic-Knowledge-API/documentation/overview}
+\item API docs: \url{https://dev.labs.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d9001ca73072048922d97}
 }
 }
 
@@ -31,8 +31,26 @@ Microsoft Academic Client
 
 \section{Authentication}{
 
-See \url{https://azure.microsoft.com/en-us/try/cognitive-services/} to get
-an API key
+See \url{https://labs.cognitive.microsoft.com/en-us/subscriptions} to get
+an API key. Make sure you enable Academic Knowledge and. They should
+give you two API keys - use either one. You can always pass your API
+key as a parameter to functions in \code{microdemic}, but we strongly
+encourage you to set an environment variable, named \code{MICROSOFT_ACADEMIC_KEY}
+
+To set the environment variable for the current R session only,
+run \code{Sys.setenv(MICROSOFT_ACADEMIC_KEY = "yourkey")}. Then \code{microdemic}
+will pick up this key and you do not have to pass your key as a
+parameter to the functions.
+
+Even better, save your environment variable in the file that R will use
+to read in environment variables like \code{MICROSOFT_ACADEMIC_KEY=yourkey}.
+This may vary by system and machine.
+See \code{?Startup} for details. It's likely your \code{.Renviron} file that
+is stored in your home directory. Or could be another environment
+variable holding file like \code{.zshrc} or \code{.bash_profile}. After saving the
+file, make sure to quit R, source that file like \code{source .Renviron},
+then start R again. Or restart your RStudio session or similar for
+other R scenarios.
 }
 
 \section{Rate limits}{

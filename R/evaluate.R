@@ -8,9 +8,10 @@
 #' @param atts (character) fields to return, in a character vector. See
 #' <https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/entityattributes>
 #' for details.
-#' @param model (character) Name of the model that you wish to query. One of 'latest' 
-#' or 'beta-2015'. Default: latest
-#' @param key (character) microsoft academic API key, see Details.
+#' @param model (character) Name of the model that you wish to query. One 
+#' of 'latest' or 'beta-2015'. Default: latest
+#' @param key (character) microsoft academic API key, see the `Authentication` 
+#' section in [microdemic-package]
 #' @param ... curl options passed on to [crul::HttpClient]
 #' @return a list of length two, with `expr` (character) and
 #' `entities` (data.frame)

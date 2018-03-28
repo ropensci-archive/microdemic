@@ -11,18 +11,19 @@ ma_similarity(s1, s2, method = "GET", model = "latest", key = NULL, ...)
 
 \item{method}{(character) one of GET (default) or POST}
 
-\item{model}{(character) Name of the model that you wish to query. One of 'latest'
-or 'beta-2015'. Default: latest}
+\item{model}{(character) Name of the model that you wish to query. One of
+'latest' or 'beta-2015'. Default: latest}
 
-\item{key}{(character) microsoft academic API key, see \link{microdemic}}
+\item{key}{(character) microsoft academic API key, see the \code{Authentication}
+section in \link{microdemic-package}}
 
 \item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \value{
-a single value representing the cosine similarity of the text inputs of
-s1 and s2. The output is represented by a floating point between -1.0 and +1.0.
-The similarity API evaluates the strings base on their academic concepts,
-with +1.0 being the most similar and -1.0 being the least similar.
+a single value representing the cosine similarity of the text inputs
+of s1 and s2. The output is represented by a floating point between -1.0
+and +1.0. The similarity API evaluates the strings base on their academic
+concepts, with +1.0 being the most similar and -1.0 being the least similar.
 }
 \description{
 Similarity API

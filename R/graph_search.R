@@ -3,7 +3,8 @@
 #' @export
 #' @param query (character) query terms
 #' @param mode (character) json (default) or lambda
-#' @param key (character) microsoft academic API key, see Details.
+#' @param key (character) microsoft academic API key, see the `Authentication` 
+#' section in [microdemic-package]
 #' @param ... curl options passed on to [crul::HttpClient]
 #' @references
 #' <https://westus.dev.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/57e3569ddbe2d91158fa270e>

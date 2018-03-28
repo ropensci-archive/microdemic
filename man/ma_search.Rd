@@ -21,10 +21,11 @@ ma_search(query, count = 10, offset = 0, orderby = NULL, atts = c("Id",
 \url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/entityattributes}
 for details.}
 
-\item{model}{(character) Name of the model that you wish to query. One of 'latest'
-or 'beta-2015'. Default: latest}
+\item{model}{(character) Name of the model that you wish to query. One
+of 'latest' or 'beta-2015'. Default: latest}
 
-\item{key}{(character) microsoft academic API key, see Details.}
+\item{key}{(character) microsoft academic API key, see the \code{Authentication}
+section in \link{microdemic-package}}
 
 \item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }

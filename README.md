@@ -6,13 +6,14 @@ microdemic
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
 [![Build Status](https://travis-ci.org/ropensci/microdemic.svg?branch=master)](https://travis-ci.org/ropensci/microdemic)
 [![codecov](https://codecov.io/gh/ropensci/microdemic/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/microdemic)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/microdemic)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/microdemic)](https://cran.r-project.org/package=microdemic)
 
 `microdemic` - Microsoft Academic Client
 
-API docs: <https://azure.microsoft.com/en-us/services/cognitive-services/academic-knowledge/>
+API docs: <https://dev.labs.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d9001ca73072048922d97>
 
-Get a API key at <https://azure.microsoft.com/en-us/try/cognitive-services/>
+Get a API key at <https://labs.cognitive.microsoft.com/en-us/subscriptions>
 
 ## install
 
@@ -50,18 +51,18 @@ res <- ma_interpret(query = "papers by jaime'...")
 ```r
 ma_evaluate(expr)
 #> # A tibble: 10 x 8
-#>    logprob         Id Ti         Y    CC AA    E                     J.JN 
-#>  *   <dbl>      <dbl> <chr>  <int> <int> <lis> <chr>                 <chr>
-#>  1   -14.9 2337454357 inten…  1998 13261 <dat… "{\"DN\":\"Intensive… lanc…
-#>  2   -17.8 2122159856 agata…  2012   139 <dat… "{\"DN\":\"AGATA - A… nucl…
-#>  3   -18.0 2567424265 regre…  2016    79 <dat… "{\"DN\":\"Regressio… n en…
-#>  4   -18.2 2018655931 effec…  1995   812 <dat… "{\"DN\":\"Effect of… j bi…
-#>  5   -18.3 1507854122 the u…  2002   413 <dat… "{\"DN\":\"The use o… clin…
-#>  6   -18.6 2066093376 inter…  2008   205 <dat… "{\"DN\":\"Interpret… brit…
-#>  7   -18.7 2035651919 diffe…  2005   243 <dat… "{\"DN\":\"Different… biom…
-#>  8   -18.8 2049816406 surfa…  1996   457 <dat… "{\"DN\":\"Surface r… j bi…
-#>  9   -18.9 2038399305 from …  2008    65 <dat… "{\"DN\":\"From Ge(L… prog…
-#> 10   -19.0 2165320653 a pha…  2006   248 <dat… "{\"DN\":\"A Phase I… clin…
+#>    logprob          Id Ti         Y    CC AA    E                    J.JN 
+#>  *   <dbl>       <dbl> <chr>  <int> <int> <lis> <chr>                <chr>
+#>  1   -14.9 2337454357. inten…  1998 13281 <dat… "{\"DN\":\"Intensiv… lanc…
+#>  2   -17.8 2122159856. agata…  2012   140 <dat… "{\"DN\":\"AGATA - … nucl…
+#>  3   -17.9 2567424265. regre…  2016    90 <dat… "{\"DN\":\"Regressi… n en…
+#>  4   -18.2 2018655931. effec…  1995   811 <dat… "{\"DN\":\"Effect o… j bi…
+#>  5   -18.3 1507854122. the u…  2002   412 <dat… "{\"DN\":\"The use … clin…
+#>  6   -18.6 2066093376. inter…  2008   207 <dat… "{\"DN\":\"Interpre… brit…
+#>  7   -18.7 2035651919. diffe…  2005   242 <dat… "{\"DN\":\"Differen… biom…
+#>  8   -18.8 2049816406. surfa…  1996   458 <dat… "{\"DN\":\"Surface … j bi…
+#>  9   -19.0 2038399305. from …  2008    65 <dat… "{\"DN\":\"From Ge(… prog…
+#> 10   -19.0 2125111321. isola…  2011    85 <dat… "{\"DN\":\"Isolated… circ…
 ```
 
 or go to evalulate directly
@@ -70,18 +71,18 @@ or go to evalulate directly
 ```r
 ma_evaluate(query = "Y='19'...")
 #> # A tibble: 10 x 8
-#>    logprob         Id Ti         Y     CC AA    E                    J.JN 
-#>  *   <dbl>      <dbl> <chr>  <int>  <int> <lis> <chr>                <chr>
-#>  1   -13.1 2144634347 molec…  1989 125571 <dat… "{\"DN\":\"Molecula… <NA> 
-#>  2   -13.6 2596886333 diagn…  1994  88682 <dat… "{\"DN\":\"Diagnost… <NA> 
-#>  3   -13.8 2339804494 fuzzy…  1996  36075 <dat… "{\"DN\":\"Fuzzy se… <NA> 
-#>  4   -13.8 2156909104 the n…  1995  27342 <dat… "{\"DN\":\"The natu… tech…
-#>  5   -13.9 2158714788 gappe…  1997  52865 <dat… "{\"DN\":\"Gapped B… nar  
-#>  6   -13.9 1856219842 stand…  1992  56992 <dat… "{\"DN\":\"Standard… <NA> 
-#>  7   -14.1 2132905138 crc h…  1990  37155 <dat… "{\"DN\":\"CRC Hand… <NA> 
-#>  8   -14.2 2623205651 quant…  1993  15172 <dat… "{\"DN\":\"Quantum … <NA> 
-#>  9   -14.2 2152195021 parti…  1995  26464 <dat… "{\"DN\":\"Particle… <NA> 
-#> 10   -14.2 2148603752 stati…  1998  18218 <dat… "{\"DN\":\"Statisti… <NA>
+#>    logprob          Id Ti         Y     CC AA    E                   J.JN 
+#>  *   <dbl>       <dbl> <chr>  <int>  <int> <lis> <chr>               <chr>
+#>  1   -13.1 2144634347. molec…  1989 126083 <dat… "{\"DN\":\"Molecul… <NA> 
+#>  2   -13.6 2596886333. diagn…  1994  89916 <dat… "{\"DN\":\"Diagnos… <NA> 
+#>  3   -13.8 2339804494. fuzzy…  1996  36215 <dat… "{\"DN\":\"Fuzzy s… <NA> 
+#>  4   -13.8 2156909104. the n…  1995  27504 <dat… "{\"DN\":\"The nat… tech…
+#>  5   -13.9 2158714788. gappe…  1997  53035 <dat… "{\"DN\":\"Gapped … nar  
+#>  6   -13.9 1856219842. stand…  1992  57527 <dat… "{\"DN\":\"Standar… <NA> 
+#>  7   -14.1 2132905138. crc h…  1990  37782 <dat… "{\"DN\":\"CRC Han… <NA> 
+#>  8   -14.2 2623205651. quant…  1993  15322 <dat… "{\"DN\":\"Quantum… <NA> 
+#>  9   -14.2 2152195021. parti…  1995  26555 <dat… "{\"DN\":\"Particl… <NA> 
+#> 10   -14.2 2148603752. stati…  1998  18273 <dat… "{\"DN\":\"Statist… <NA>
 ```
 
 ## Calchistogram
@@ -93,24 +94,24 @@ res <- ma_calchist(query = "And(Composite(AA.AuN=='jaime teevan'),Y>2012)",
 res$histograms$histogram
 #> [[1]]
 #>   value logprob count
-#> 1  2013 -17.060    19
-#> 2  2014 -17.273    13
-#> 3  2016 -17.918    16
-#> 4  2015 -17.998    13
-#> 5  2017 -18.562    11
+#> 1  2013 -17.105    18
+#> 2  2014 -17.315    13
+#> 3  2015 -17.961    13
+#> 4  2016 -18.016    16
+#> 5  2017 -19.015    11
 #> 
 #> [[2]]
 #>                         value logprob count
-#> 1            computer science -16.172    56
-#> 2                 data mining -16.833    25
-#> 3               search engine -17.220    13
-#> 4               crowdsourcing -17.299    19
-#> 5       information retrieval -17.326    14
-#> 6                       crowd -17.416    16
-#> 7  human computer interaction -17.639    18
-#> 8                  multimedia -17.783    13
-#> 9              world wide web -18.070     5
-#> 10           search analytics -18.072     5
+#> 1            computer science -16.227    55
+#> 2                 data mining -16.779    26
+#> 3               crowdsourcing -17.163    20
+#> 4               search engine -17.218    13
+#> 5       information retrieval -17.363    13
+#> 6  human computer interaction -17.656    18
+#> 7                  multimedia -17.810    13
+#> 8            search analytics -18.091     5
+#> 9              world wide web -18.096     5
+#> 10             social network -18.244     5
 ```
 
 ## Similarity
@@ -173,3 +174,5 @@ ma_graph_search(query = x)
 * License: MIT
 * Get citation information for `microdemic` in R doing `citation(package = 'microdemic')`
 * Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+[![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)

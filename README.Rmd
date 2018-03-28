@@ -13,13 +13,14 @@ knitr::opts_chunk$set(
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
 [![Build Status](https://travis-ci.org/ropensci/microdemic.svg?branch=master)](https://travis-ci.org/ropensci/microdemic)
 [![codecov](https://codecov.io/gh/ropensci/microdemic/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/microdemic)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/microdemic)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/microdemic)](https://cran.r-project.org/package=microdemic)
 
 `microdemic` - Microsoft Academic Client
 
-API docs: <https://azure.microsoft.com/en-us/services/cognitive-services/academic-knowledge/>
+API docs: <https://dev.labs.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d9001ca73072048922d97>
 
-Get a API key at <https://azure.microsoft.com/en-us/try/cognitive-services/>
+Get a API key at <https://labs.cognitive.microsoft.com/en-us/subscriptions>
 
 ## install
 
@@ -109,3 +110,5 @@ ma_graph_search(query = x)
 * License: MIT
 * Get citation information for `microdemic` in R doing `citation(package = 'microdemic')`
 * Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+[![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)

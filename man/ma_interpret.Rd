@@ -17,7 +17,8 @@ ma_interpret(query, count = 10, offset = 0, complete = TRUE, key = NULL,
 \item{complete}{(logical) \code{TRUE} means that auto-completion suggestions
 are generated based on the grammar and graph data. default: \code{TRUE}}
 
-\item{key}{(character) microsoft academic API key, see Details.}
+\item{key}{(character) microsoft academic API key, see the \code{Authentication}
+section in \link{microdemic-package}}
 
 \item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
