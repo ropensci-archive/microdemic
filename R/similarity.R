@@ -30,10 +30,10 @@ ma_similarity <- function(s1, s2, method = "GET", model = "latest",
 
   if (!method %in% c("GET", "POST")) stop("'method' must be one of GET or POST")
   
-  assert(model, "character")
-  if (!model %in% c('latest', 'beta-2015')) {
-    stop("model must be one or 'latest' or 'beta-2015'")
-  }
+  # assert(model, "character")
+  # if (!model %in% c('latest', 'beta-2015')) {
+  #   stop("model must be one or 'latest' or 'beta-2015'")
+  # }
 
   if (method == "GET") {
     args <- comp(list(s1 = s1, s2 = s2, model = model))
