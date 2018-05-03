@@ -21,7 +21,7 @@ http_interactions:
       content-type: application/json
       request-context: appId=cid-v1:7cd06f0e-6d73-46a5-9c10-4ebe681d0156
       x-powered-by: ASP.NET
-      date: Mon, 30 Apr 2018 23:23:50 GMT
+      date: Thu, 03 May 2018 05:22:32 GMT
     body:
       encoding: UTF-8
       string: "{\n\"query\":\"papers by jaime\", \n\"interpretations\":[\n{\n  \"logprob\"
@@ -66,5 +66,5 @@ http_interactions:
         masjuan</attr></rule>\",\n  \"rules\":[ \n  { \n    \"name\":\"#GetPapers\",\n
         \   \"output\":  \n    { \n      \"type\":\"query\",\n      \"value\":\"Composite(AA.AuN=='jaime
         masjuan')\"\n    }\n  }\n  ]\n}\n]\n}\n"
-  recorded_at: 2018-04-30 23:23:50 GMT
-  recorded_with: vcr/0.0.8.9534, webmockr/0.2.2.9119, crul/0.5.2
+  recorded_at: 2018-05-03 05:22:33 GMT
+  recorded_with: vcr/0.0.8.9538, webmockr/0.2.2.9119, crul/0.5.2
