@@ -2,6 +2,7 @@
 #'
 #' @export
 #' @inheritParams ma_search
+#' @return data.frame, with two columns: `Id` and `abstract`
 #' @examples \dontrun{
 #' ma_abstract(query = "Y=2010", count = 10)
 #' ma_abstract(query = "Y=[2010, 2012)", count = 10)
@@ -10,7 +11,10 @@ ma_abstract <- function(query, count = 10, offset = 0, orderby = NULL,
                         model = "latest", key = NULL, ...) {
   out <- ma_evaluate(query, count, offset, orderby, c("Id", "E"), 
     model, key, ...)
-  unname(vapply(out$E, function(z) invabs2abs(jsonlite::fromJSON(z)$IA), ""))
+  tmp <- unname(
+    vapply(out$E, function(z) invabs2abs(jsonlite::fromJSON(z)$IA), ""))
+  tibble::as_tibble(data.frame(Id = out$Id, abstract = tmp, 
+    stringsAsFactors = FALSE))
 }
 
 invabs2abs <- function(x) {

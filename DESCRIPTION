@@ -6,7 +6,7 @@ Description: The 'Microsoft Academic Knowledge' API provides programmatic access
 		(<https://academic.microsoft.com/>). Includes methods matching all 'Microsoft
 		Academic' API routes, including search, graph search, text similarity, and
 		interpret natural language query string.
-Version: 0.3.0.9100
+Version: 0.3.1.9100
 Authors@R: person("Scott", "Chamberlain", email = "myrmecocystus+r@gmail.com",
     role = c("aut", "cre"))
 License: MIT + file LICENSE

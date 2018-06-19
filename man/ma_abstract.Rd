@@ -24,6 +24,9 @@ section in \link{microdemic-package}}
 
 \item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
+\value{
+data.frame, with two columns: \code{Id} and \code{abstract}
+}
 \description{
 Fetch abstracts
 }
