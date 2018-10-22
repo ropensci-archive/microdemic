@@ -5,8 +5,8 @@
 \title{Evaluate API}
 \usage{
 ma_evaluate(query, count = 10, offset = 0, orderby = NULL,
-  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"), model = "latest",
-  key = NULL, ...)
+  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"),
+  model = "latest", key = NULL, ...)
 }
 \arguments{
 \item{query}{(character) query terms}

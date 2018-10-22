@@ -1,9 +1,6 @@
 context("ma_similarity")
 
 test_that("ma_similarity works as expected", {
-  skip_on_cran()
-  Sys.sleep(1)
-
   s1 <- "Using complementary priors, we derive a fast greedy algorithm that
 	can learn deep directed belief networks one layer at a time, provided the
 	top two layers form an undirected associative memory"
@@ -12,7 +9,8 @@ test_that("ma_similarity works as expected", {
 	machine learning systems. However, overfitting is a serious problem in
 	such networks"
 
-	aa <- ma_similarity(s1, s2)
-
-  expect_type(aa, "double")
+  vcr::use_cassette("ma_similarity", {
+  	aa <- ma_similarity(s1, s2)
+    expect_type(aa, "double")
+  })  
 })

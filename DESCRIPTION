@@ -2,23 +2,25 @@ Package: microdemic
 Type: Package
 Title: 'Microsoft Academic' API Client
 Description: The 'Microsoft Academic Knowledge' API provides programmatic access
-		to scholarly articles in the 'Microsoft Academic Graph'
-		(<https://academic.microsoft.com/>). Includes methods matching all 'Microsoft
-		Academic' API routes, including search, graph search, text similarity, and
-		interpret natural language query string.
-Version: 0.3.1.9100
+	to scholarly articles in the 'Microsoft Academic Graph'
+	(<https://academic.microsoft.com/>). Includes methods matching all 'Microsoft
+	Academic' API routes, including search, graph search, text similarity, and
+	interpret natural language query string.
+Version: 0.3.2.9100
 Authors@R: person("Scott", "Chamberlain", email = "myrmecocystus+r@gmail.com",
-    role = c("aut", "cre"))
+    role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1444-9135"))
 License: MIT + file LICENSE
 LazyData: TRUE
+Encoding: UTF-8
 URL: https://github.com/ropensci/microdemic
 BugReports: https://github.com/ropensci/microdemic/issues
 Roxygen: list(markdown = TRUE)
 Imports:
-    crul (>= 0.4.0),
+    crul (>= 0.5.2),
     jsonlite (>= 1.5),
     data.table,
     tibble
 Suggests:
-    testthat
-RoxygenNote: 6.0.1
+    testthat,
+    vcr
+RoxygenNote: 6.1.0

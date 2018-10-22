@@ -4,7 +4,8 @@
 \alias{ma_similarity}
 \title{Similarity API}
 \usage{
-ma_similarity(s1, s2, method = "GET", model = "latest", key = NULL, ...)
+ma_similarity(s1, s2, method = "GET", model = "latest", key = NULL,
+  ...)
 }
 \arguments{
 \item{s1, s2}{(character) strings 1 and 2. required}
