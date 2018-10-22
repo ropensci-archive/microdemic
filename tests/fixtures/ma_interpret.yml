@@ -1,0 +1,70 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.labs.cognitive.microsoft.com/academic/v1.0/interpret?query=papers%20by%20jaime%27...&complete=1&count=10&offset=0&model=latest
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/3.2 crul/0.6.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Ocp-Apim-Subscription-Key: <<<microdemic_api_key>>>
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-length: '3029'
+      content-type: application/json
+      access-control-allow-origin: '*'
+      request-context: appId=cid-v1:7cd06f0e-6d73-46a5-9c10-4ebe681d0156
+      x-powered-by: ASP.NET
+      date: Mon, 22 Oct 2018 23:06:22 GMT
+    body:
+      encoding: UTF-8
+      string: "{\n\"query\":\"papers by jaime\", \n\"interpretations\":[\n{\n  \"logprob\"
+        : -26.144,\n  \"parse\":\"<rule name=\\\"#GetPapers\\\">papers by <attr name=\\\"academic#AA.AuN\\\">jaime
+        herrera acosta</attr></rule>\",\n  \"rules\":[ \n  { \n    \"name\":\"#GetPapers\",\n
+        \   \"output\":  \n    { \n      \"type\":\"query\",\n      \"value\":\"Composite(AA.AuN=='jaime
+        herrera acosta')\"\n    }\n  }\n  ]\n}, \n{\n  \"logprob\" : -26.249,\n  \"parse\":\"<rule
+        name=\\\"#GetPapers\\\">papers by <attr name=\\\"academic#AA.AuN\\\">jaime
+        sepulveda</attr></rule>\",\n  \"rules\":[ \n  { \n    \"name\":\"#GetPapers\",\n
+        \   \"output\":  \n    { \n      \"type\":\"query\",\n      \"value\":\"Composite(AA.AuN=='jaime
+        sepulveda')\"\n    }\n  }\n  ]\n}, \n{\n  \"logprob\" : -26.478,\n  \"parse\":\"<rule
+        name=\\\"#GetPapers\\\">papers by <attr name=\\\"academic#AA.AuN\\\">jaime
+        hughes</attr></rule>\",\n  \"rules\":[ \n  { \n    \"name\":\"#GetPapers\",\n
+        \   \"output\":  \n    { \n      \"type\":\"query\",\n      \"value\":\"Composite(AA.AuN=='jaime
+        hughes')\"\n    }\n  }\n  ]\n}, \n{\n  \"logprob\" : -26.610,\n  \"parse\":\"<rule
+        name=\\\"#GetPapers\\\">papers by <attr name=\\\"academic#AA.AuN\\\">jaime
+        c grunlan</attr></rule>\",\n  \"rules\":[ \n  { \n    \"name\":\"#GetPapers\",\n
+        \   \"output\":  \n    { \n      \"type\":\"query\",\n      \"value\":\"Composite(AA.AuN=='jaime
+        c grunlan')\"\n    }\n  }\n  ]\n}, \n{\n  \"logprob\" : -26.778,\n  \"parse\":\"<rule
+        name=\\\"#GetPapers\\\">papers by <attr name=\\\"academic#AA.AuN\\\" canonical=\\\"j
+        colchero\\\">jaime colchero</attr></rule>\",\n  \"rules\":[ \n  { \n    \"name\":\"#GetPapers\",\n
+        \   \"output\":  \n    { \n      \"type\":\"query\",\n      \"value\":\"Composite(AA.AuN=='j
+        colchero')\"\n    }\n  }\n  ]\n}, \n{\n  \"logprob\" : -26.972,\n  \"parse\":\"<rule
+        name=\\\"#GetPapers\\\">papers by <attr name=\\\"academic#AA.AuN\\\">jaime
+        goldman</attr></rule>\",\n  \"rules\":[ \n  { \n    \"name\":\"#GetPapers\",\n
+        \   \"output\":  \n    { \n      \"type\":\"query\",\n      \"value\":\"Composite(AA.AuN=='jaime
+        goldman')\"\n    }\n  }\n  ]\n}, \n{\n  \"logprob\" : -26.977,\n  \"parse\":\"<rule
+        name=\\\"#GetPapers\\\">papers by <attr name=\\\"academic#AA.AuN\\\">jaime
+        a davidson</attr></rule>\",\n  \"rules\":[ \n  { \n    \"name\":\"#GetPapers\",\n
+        \   \"output\":  \n    { \n      \"type\":\"query\",\n      \"value\":\"Composite(AA.AuN=='jaime
+        a davidson')\"\n    }\n  }\n  ]\n}, \n{\n  \"logprob\" : -27.184,\n  \"parse\":\"<rule
+        name=\\\"#GetPapers\\\">papers by <attr name=\\\"academic#AA.AuN\\\">jaime
+        huertacepas</attr></rule>\",\n  \"rules\":[ \n  { \n    \"name\":\"#GetPapers\",\n
+        \   \"output\":  \n    { \n      \"type\":\"query\",\n      \"value\":\"Composite(AA.AuN=='jaime
+        huertacepas')\"\n    }\n  }\n  ]\n}, \n{\n  \"logprob\" : -27.225,\n  \"parse\":\"<rule
+        name=\\\"#GetPapers\\\">papers by <attr name=\\\"academic#AA.AuN\\\">jaime
+        miranda</attr></rule>\",\n  \"rules\":[ \n  { \n    \"name\":\"#GetPapers\",\n
+        \   \"output\":  \n    { \n      \"type\":\"query\",\n      \"value\":\"Composite(AA.AuN=='jaime
+        miranda')\"\n    }\n  }\n  ]\n}, \n{\n  \"logprob\" : -27.248,\n  \"parse\":\"<rule
+        name=\\\"#GetPapers\\\">papers by <attr name=\\\"academic#AA.AuN\\\" canonical=\\\"j
+        masjuan\\\">jaime masjuan</attr></rule>\",\n  \"rules\":[ \n  { \n    \"name\":\"#GetPapers\",\n
+        \   \"output\":  \n    { \n      \"type\":\"query\",\n      \"value\":\"Composite(AA.AuN=='j
+        masjuan')\"\n    }\n  }\n  ]\n}\n]\n}\n"
+  recorded_at: 2018-10-22 23:06:22 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.2.8
