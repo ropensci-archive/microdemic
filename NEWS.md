@@ -1,3 +1,12 @@
+microdemic 0.4.0
+================
+
+### MINOR IMPROVEMENTS
+
+* do testing with `vcr` (#5) (#6)
+* make the output of `ma_abstract()` a data.frame and add `Id` column to 
+facilitate matching to other data (#4)
+
 microdemic 0.3.0
 ================
 
