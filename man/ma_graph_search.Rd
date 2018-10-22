@@ -19,27 +19,31 @@ section in \link{microdemic-package}}
 \description{
 Graph search API
 }
+\note{
+THIS FUNCTION CURRENTLY DOES NOT WORK AS OF 2018-10-22 -
+IT'S NOT CLEAR HOW TO QUERY AGAINST THIS API ROUTE
+(\code{academic/v1.0/graph/search})
+}
 \examples{
 \dontrun{
-x <- '{
-"path": "/paper/AuthorIDs/author",
- "paper": {
-   "type": "Paper",
-   "NormalizedTitle": "graph engine",
-   "select": [ "OriginalTitle" ]
- },
- "author": {
-   "return": { "type": "Author", "Name": "bin shao" }
- }
-}'
-
-res <- ma_graph_search(query = x)
-res$Results
-do.call(rbind, res$Results)
+# x <- '{
+# "path": "/paper/AuthorIDs/author",
+#  "paper": {
+#    "type": "Paper",
+#    "NormalizedTitle": "graph engine",
+#    "select": [ "OriginalTitle" ]
+#  },
+#  "author": {
+#    "return": { "type": "Author", "Name": "bin shao" }
+#  }
+# }'
+# 
+# res <- ma_graph_search(query = x)
+# res$Results
+# do.call(rbind, res$Results)
 }
 }
 \references{
-\url{https://westus.dev.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/57e3569ddbe2d91158fa270e}
 graph search method: \url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/graphsearchmethod}
 json search: \url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/jsonsearchsyntax}
 lambda search: \url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/lambdasearchsyntax}
