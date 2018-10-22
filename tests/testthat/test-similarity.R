@@ -12,5 +12,5 @@ test_that("ma_similarity works as expected", {
   vcr::use_cassette("ma_similarity", {
   	aa <- ma_similarity(s1, s2)
     expect_type(aa, "double")
-  })  
+  }, preserve_exact_body_bytes = TRUE)
 })

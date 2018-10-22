@@ -24,9 +24,9 @@ http_interactions:
       expires: '-1'
       x-aspnet-version: 4.0.30319
       x-powered-by: ASP.NET
-      date: Mon, 22 Oct 2018 23:07:31 GMT
+      date: Mon, 22 Oct 2018 23:35:40 GMT
     body:
-      encoding: UTF-8
-      string: '0.61436052678568842'
-  recorded_at: 2018-10-22 23:07:31 GMT
+      encoding: ASCII-8BIT
+      string: MC42MTQzNjA1MjY3ODU2ODg0Mg==
+  recorded_at: 2018-10-22 23:35:40 GMT
   recorded_with: vcr/0.2.0, webmockr/0.2.8

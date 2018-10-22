@@ -11,5 +11,5 @@ test_that("ma_search works as expected", {
     expect_type(aa$logprob, "double")
     expect_type(aa$Id, "double")
     expect_type(aa$VFN, "character")
-  })
+  }, preserve_exact_body_bytes = TRUE)
 })

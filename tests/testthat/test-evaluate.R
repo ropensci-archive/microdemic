@@ -10,5 +10,5 @@ test_that("ma_evaluate works as expected", {
     expect_type(aa$logprob, "double")
     expect_type(aa$Id, "double")
     expect_type(aa$E, "character")
-  })
+  }, preserve_exact_body_bytes = TRUE)
 })

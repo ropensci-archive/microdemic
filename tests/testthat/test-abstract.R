@@ -8,5 +8,5 @@ test_that("ma_abstract works as expected", {
     expect_is(aa$Id, "numeric")
     expect_is(aa$abstract, "character")
     expect_equal(NROW(aa), 10)
-  })
+  }, preserve_exact_body_bytes = TRUE)
 })
