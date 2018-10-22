@@ -83,25 +83,7 @@ ma_similarity(s1, s2)
 ## Abstract
 
 ```{r}
-res <- ma_abstract(query = "Y='19'...", count = 5)
-Filter(nzchar, res)
-```
-
-## Graph search
-
-```{r}
-x <- '{
-"path": "/paper/AuthorIDs/author",
- "paper": {
-   "type": "Paper",
-   "NormalizedTitle": "graph engine",
-   "select": [ "OriginalTitle" ]
- },
- "author": {
-   "return": { "type": "Author", "Name": "bin shao" }
- }
-}'
-ma_graph_search(query = x)
+ma_abstract(query = "Y='19'...", count = 5)
 ```
 
 
