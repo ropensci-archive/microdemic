@@ -1,6 +1,8 @@
 context("ma_evaluate")
 
 test_that("ma_evaluate works as expected", {
+  skip_on_cran()
+
   vcr::use_cassette("ma_evaluate", {
     aa <- ma_evaluate(query = "Y='19'...")
 

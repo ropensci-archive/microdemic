@@ -1,6 +1,8 @@
 context("ma_abstract")
 
 test_that("ma_abstract works as expected", {
+  skip_on_cran()
+
   vcr::use_cassette("ma_abstract", {
     aa <- ma_abstract(query = "Y='19'...", count = 10)
 

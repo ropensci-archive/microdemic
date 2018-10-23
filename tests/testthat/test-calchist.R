@@ -1,6 +1,7 @@
 context("ma_calchist")
 
 # test_that("ma_calchist works as expected", {
+#   skip_on_cran()
 #   ## FIXME: add vcr back later, rate limit exceeded on this, must have changed to be very very few per time period
 #   vcr::use_cassette("ma_calchist", {
 #     aa <- ma_calchist(query = "And(Composite(AA.AuN=='jaime teevan'),Y>2012)",

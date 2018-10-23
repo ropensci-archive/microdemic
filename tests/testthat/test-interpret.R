@@ -1,6 +1,8 @@
 context("ma_interpret")
 
 test_that("ma_interpret works as expected", {
+  skip_on_cran()
+  
   vcr::use_cassette("ma_interpret", {
     aa <- ma_interpret(query = "papers by jaime'...")
 

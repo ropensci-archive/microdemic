@@ -1,6 +1,8 @@
 context("ma_search")
 
 test_that("ma_search works as expected", {
+  skip_on_cran()
+
   vcr::use_cassette("ma_search", {
     aa <- ma_search(query = "Y='19'...")
 
