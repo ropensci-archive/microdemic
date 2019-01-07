@@ -25,5 +25,8 @@ invabs2abs <- function(x) {
       ab[j] <- i
     }
   }
+  if (!is.null(ab)) {
+    ab <- ab[!is.na(ab)]
+  }
   paste(ab, collapse = " ")
 }
