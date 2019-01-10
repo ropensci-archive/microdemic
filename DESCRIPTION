@@ -22,5 +22,6 @@ Imports:
     tibble
 Suggests:
     testthat,
-    vcr
+    vcr (>= 0.2.0.9114)
 RoxygenNote: 6.1.0
+Remotes: ropensci/vcr
