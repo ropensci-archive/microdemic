@@ -17,7 +17,7 @@ ma_HTTP <- function(path, args, key, method = "GET", body = list(),
     GET = cli$get(path, query = args, ...),
     POST = cli$post(path, query = args, body = body, encode = encode, ...)
   )
-  res$raise_for_status()
+  raise_for_status2(res)
   txt <- res$parse("UTF-8")
   jsonlite::fromJSON(txt, flatten = TRUE)
 }
@@ -48,4 +48,32 @@ assert <- function(x, y) {
            paste0(y, collapse = ", "), call. = FALSE)
     }
   }
+}
+
+raise_for_status2 <- function(res) {
+  if (res$status_code >= 300) {
+    er_lst <- tryCatch(
+      parse_error_msg(res),
+      error = function(e) httpcode::http_code(res$status_code)
+    )
+    er_msg <- sprintf(
+      "%s (HTTP %s)\nExplanation: %s",
+      res$status_code, er_lst$message, er_lst$explanation
+    )
+    stop(er_msg, call. = FALSE)
+  }
+}
+
+parse_error_msg <- function(res) {
+  txt <- res$parse("UTF-8")
+  er_vec <- unlist(jsonlite::fromJSON(txt))
+  # er_vec names used to be capitilized (e.g., "Error.Code", not "error.code").
+  # convert to lowercase just in case API goes back to using caps.
+  names(er_vec) <- tolower(names(er_vec))
+  list(
+    # the error.code element refers to a short error message, not the HTTP
+    # status code
+    message = er_vec[["error.code"]],
+    explanation = er_vec[["error.message"]]
+  )
 }
