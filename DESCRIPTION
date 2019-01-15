@@ -19,7 +19,8 @@ Imports:
     crul (>= 0.5.2),
     jsonlite (>= 1.5),
     data.table,
-    tibble
+    tibble,
+    httpcode (>= 0.2.0)
 Suggests:
     testthat,
     vcr (>= 0.2.0.9114)
