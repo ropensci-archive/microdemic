@@ -1,0 +1,30 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.labs.cognitive.microsoft.com/academic/v1.0/evaluate?expr=hi-there&count=10&offset=0&attributes=Id%2CAA.AuN%2CJ.JN%2CTi%2CY%2CE%2CCC&model=latest
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/3.2 crul/0.6.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Ocp-Apim-Subscription-Key: <<<microdemic_api_key>>>
+  response:
+    status:
+      status_code: '400'
+      message: Bad Request
+      explanation: Bad request syntax or unsupported method
+    headers:
+      status: HTTP/1.1 400 Bad Request
+      content-length: '100'
+      content-type: application/json
+      access-control-allow-origin: '*'
+      request-context: appId=cid-v1:7cd06f0e-6d73-46a5-9c10-4ebe681d0156
+      x-powered-by: ASP.NET
+      date: Sat, 12 Jan 2019 03:18:16 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: eyJFcnJvciI6eyJDb2RlIjoiQmFkIEFyZ3VtZW50IiwiTWVzc2FnZSI6IkludmFsaWQgcXVlcnkgZXhwcmVzc2lvblxyXG5QYXJhbWV0ZXIgbmFtZTogZXhwcmVzc2lvbiJ9fQ==
+  recorded_at: 2019-01-12 03:18:16 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.6.0
