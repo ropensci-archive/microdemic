@@ -7,8 +7,12 @@ Description: The 'Microsoft Academic Knowledge' API provides programmatic access
 	Academic' API routes, including search, graph search, text similarity, and
 	interpret natural language query string.
 Version: 0.4.2.9311
-Authors@R: person("Scott", "Chamberlain", email = "myrmecocystus+r@gmail.com",
-    role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1444-9135"))
+Authors@R: c(
+    person("Scott", "Chamberlain", email = "myrmecocystus+r@gmail.com",
+        role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1444-9135")),
+    person("Christopher", "Baker", email = "chriscrewbaker@gmail.com", 
+        role = "ctb")
+    )
 License: MIT + file LICENSE
 LazyData: TRUE
 Encoding: UTF-8
