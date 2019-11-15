@@ -141,7 +141,14 @@
   "fileSize": "62.155KB",
   "keywords": ["text-mining", "literature", "pdf", "xml", "publications", "citations", "full-text", "api-client", "scholarly-articles", "scholarly-metadata", "rstats", "r", "r-package"],
   "relatedLink": "https://docs.ropensci.org/microdemic",
-  "contributor": {},
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Christopher",
+      "familyName": "Baker",
+      "email": "chriscrewbaker@gmail.com"
+    }
+  ],
   "copyrightHolder": {},
   "funder": {},
   "applicationCategory": "Literature",
