@@ -8,7 +8,7 @@ test_that("ma_interpret works as expected", {
 
     expect_is(aa, "list")
     expect_is(aa$query, "character")
-    expect_is(aa$interpretations, "data.frame")
-    expect_named(aa$interpretations, c('logprob', 'parse', 'rules'))
+    # expect_is(aa$interpretations, "data.frame")
+    # expect_named(aa$interpretations, c('logprob', 'parse', 'rules'))
   }, preserve_exact_body_bytes = TRUE)
 })
