@@ -6,7 +6,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.2 crul/0.9.0.9200
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
       Ocp-Apim-Subscription-Key: <<<microdemic_api_key>>>
@@ -23,9 +23,10 @@ http_interactions:
       request-context: appId=cid-v1:8d5cbad1-6ca8-4d39-8271-8f3a8d671eae
       access-control-expose-headers: Request-Context
       x-powered-by: ASP.NET
-      date: Fri, 15 Nov 2019 02:30:06 GMT
+      date: Mon, 27 Jan 2020 19:49:59 GMT
     body:
       encoding: ASCII-8BIT
+      file: no
       string: eyJxdWVyeSI6InBhcGVycyBieSBqYWltZScuLi4iLCJpbnRlcnByZXRhdGlvbnMiOltdLCJ0aW1lZF9vdXRfY291bnQiOjAsInRpbWVkX291dCI6ZmFsc2V9
-  recorded_at: 2019-11-15 02:30:07 GMT
-  recorded_with: vcr/0.3.0, webmockr/0.4.0
+  recorded_at: 2020-01-27 19:49:59 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0
