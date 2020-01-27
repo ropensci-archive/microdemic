@@ -1,3 +1,21 @@
+microdemic 0.5.0
+================
+
+### NEW FEATURES
+
+* new author Christopher Baker (#13)
+* docs website at https://docs.ropensci.org/microdemic
+
+### MINOR IMPROVEMENTS
+
+* all functions now pass along detailed error messages; before we were erroring but just giving the http status code and generic message; as part of this fix now importing httpcode pkg (#7) (#12) (#14)
+* use fake API key on travis to avoid test suite error (#11)
+* internals of `ma_search()` have changed a bit; get in touch if you have any questions about this function
+
+### BUG FIXES
+
+* fix to internal function `invabs2abs()` within `ma_abstract()`: the inverted index returned from Microsoft can have missing values and we were incorrectly inserting NA's into those spots resulting in NA's in abstracts (#8) (#9)
+
 microdemic 0.4.0
 ================
 
