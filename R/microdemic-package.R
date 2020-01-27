@@ -2,8 +2,10 @@
 #'
 #' @section Links:
 #'
-#' * web interface: <https://academic.microsoft.com/>
-#' * API docs: <https://dev.labs.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d9001ca73072048922d97>
+#' * web interface: https://academic.microsoft.com/
+#' * API docs:
+#' - https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/
+#' - https://msr-apis.portal.azure-api.net/docs/services/academic-search-api/operations/565d9001ca73072048922d97
 #'
 #' @section Package API:
 #'
