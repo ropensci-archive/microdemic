@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
 ```
 
 [![cran checks](https://cranchecks.info/badges/worst/microdemic)](https://cranchecks.info/pkgs/microdemic)
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![Build Status](https://travis-ci.org/ropensci/microdemic.svg?branch=master)](https://travis-ci.org/ropensci/microdemic)
 [![codecov](https://codecov.io/gh/ropensci/microdemic/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/microdemic)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/microdemic)](https://github.com/metacran/cranlogs.app)
@@ -19,9 +19,13 @@ knitr::opts_chunk$set(
 
 `microdemic` - Microsoft Academic Client
 
-API docs: <https://dev.labs.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d9001ca73072048922d97>
+Web interface: https://academic.microsoft.com/
 
-Get a API key at <https://labs.cognitive.microsoft.com/en-us/subscriptions>
+API docs:
+- https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/
+- https://msr-apis.portal.azure-api.net/docs/services/academic-search-api/operations/565d9001ca73072048922d97
+
+Get a API key at https://msr-apis.portal.azure-api.net/signin
 
 ## install
 
@@ -34,27 +38,17 @@ install.packages("microdemic")
 dev version
 
 ```{r eval=FALSE}
-devtools::install_github("ropensci/microdemic")
+remotes::install_github("ropensci/microdemic")
 ```
 
 ```{r}
 library("microdemic")
 ```
 
-## Interpret
-
-```{r}
-res <- ma_interpret(query = "papers by jaime'...")
-(expr <- res$interpretations$rules[[1]]$output.value)
-```
-
 ## Evaluate
 
-```{r}
-ma_evaluate(expr)
-```
-
-or go to evalulate directly
+See the [query expression syntax](https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/queryexpressionsyntax)
+for help on how to construct queries - for this and other functions
 
 ```{r}
 ma_evaluate(query = "Y='19'...")

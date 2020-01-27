@@ -4,7 +4,7 @@ microdemic
 
 
 [![cran checks](https://cranchecks.info/badges/worst/microdemic)](https://cranchecks.info/pkgs/microdemic)
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![Build Status](https://travis-ci.org/ropensci/microdemic.svg?branch=master)](https://travis-ci.org/ropensci/microdemic)
 [![codecov](https://codecov.io/gh/ropensci/microdemic/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/microdemic)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/microdemic)](https://github.com/metacran/cranlogs.app)
@@ -12,9 +12,13 @@ microdemic
 
 `microdemic` - Microsoft Academic Client
 
-API docs: <https://dev.labs.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d9001ca73072048922d97>
+Web interface: https://academic.microsoft.com/
 
-Get a API key at <https://labs.cognitive.microsoft.com/en-us/subscriptions>
+API docs:
+- https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/
+- https://msr-apis.portal.azure-api.net/docs/services/academic-search-api/operations/565d9001ca73072048922d97
+
+Get a API key at https://msr-apis.portal.azure-api.net/signin
 
 ## install
 
@@ -29,7 +33,7 @@ dev version
 
 
 ```r
-devtools::install_github("ropensci/microdemic")
+remotes::install_github("ropensci/microdemic")
 ```
 
 
@@ -37,53 +41,75 @@ devtools::install_github("ropensci/microdemic")
 library("microdemic")
 ```
 
-## Interpret
-
-
-```r
-res <- ma_interpret(query = "papers by jaime'...")
-(expr <- res$interpretations$rules[[1]]$output.value)
-#> [1] "Composite(AA.AuN=='jaime herrera acosta')"
-```
-
 ## Evaluate
 
-
-```r
-ma_evaluate(expr)
-#> # A tibble: 10 x 8
-#>    logprob      Id Ti                 Y    CC AA      E             J.JN  
-#>  *   <dbl>   <dbl> <chr>          <int> <int> <list>  <chr>         <chr> 
-#>  1   -15.1  2.49e9 k doqi clinic…  2002  8642 <data.… "{\"DN\":\"K… amer …
-#>  2   -18.1  2.24e9 k doqi clinic…  2002   391 <data.… "{\"DN\":\"K… amer …
-#>  3   -18.8  2.12e9 essential hyp…  2005   300 <data.… "{\"DN\":\"E… j ame…
-#>  4   -20.0  1.60e9 re encuesta n…  2005    32 <data.… "{\"DN\":\"R… rev p…
-#>  5   -21.9  2.03e9 hypertension …  1982    96 <data.… "{\"DN\":\"H… kidne…
-#>  6   -23.8  8.22e8 mecanismos es…  2004     1 <data.… "{\"DN\":\"M… rev p…
-#>  7   -23.9  2.20e9 hipertension …  2001     2 <data.… "{\"DN\":\"H… rev p…
-#>  8   -24.2  2.34e9 hipertension …  2003     1 <data.… "{\"DN\":\"H… rev p…
-#>  9   -24.9  2.24e9 la inhibicion…  1987     1 <data.… "{\"DN\":\"L… rev i…
-#> 10   -25.3  2.26e9 revasculariza…  1987     0 <data.… "{\"DN\":\"R… <NA>
-```
-
-or go to evalulate directly
+See the [query expression syntax](https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/queryexpressionsyntax)
+for help on how to construct queries - for this and other functions
 
 
 ```r
 ma_evaluate(query = "Y='19'...")
-#> # A tibble: 10 x 8
-#>    logprob      Id Ti                 Y     CC AA      E             J.JN 
-#>  *   <dbl>   <dbl> <chr>          <int>  <int> <list>  <chr>         <chr>
-#>  1   -13.1  2.14e9 molecular clo…  1989 182096 <data.… "{\"DN\":\"M… <NA> 
-#>  2   -13.6  2.60e9 diagnostic an…  1994 127551 <data.… "{\"DN\":\"D… <NA> 
-#>  3   -13.8  1.86e9 standard meth…  1992  80778 <data.… "{\"DN\":\"S… <NA> 
-#>  4   -13.8  2.34e9 fuzzy sets      1996  67563 <data.… "{\"DN\":\"F… <NA> 
-#>  5   -13.9  2.16e9 gapped blast …  1997  67879 <data.… "{\"DN\":\"G… nar  
-#>  6   -13.9  2.89e9 computers and…  1999  56637 <data.… "{\"DN\":\"C… <NA> 
-#>  7   -13.9  2.16e9 the nature of…  1995  67809 <data.… "{\"DN\":\"T… <NA> 
-#>  8   -14.1  2.23e9 manufacture o…  1986  54405 <data.… "{\"DN\":\"M… <NA> 
-#>  9   -14.2  2.15e9 particle swar…  1995  48823 <data.… "{\"DN\":\"P… <NA> 
-#> 10   -14.2  2.43e9 numerical rec…  1988 125682 <data.… "{\"DN\":\"N… <NA>
+#> # A tibble: 10 x 349
+#>    logprob    prob     Id Ti        Y D        CC DN    S     AA    E     BT   
+#>      <dbl>   <dbl>  <dbl> <chr> <int> <chr> <int> <chr> <lis> <lis> <chr> <chr>
+#>  1   -13.7 1.17e-6 2.12e9 imag…  1992 1992… 31562 Imag… <df[… <df[… "{\"… <NA> 
+#>  2   -13.7 1.13e-6 2.60e9 diag…  1994 1994… 99513 Diag… <NUL… <df[… "{\"… a    
+#>  3   -13.7 1.09e-6 1.86e9 stan…  1992 1992… 77188 Stan… <df[… <df[… "{\"… a    
+#>  4   -13.7 1.08e-6 2.16e9 the …  1995 1995… 29019 The … <df[… <df[… "{\"… b    
+#>  5   -13.8 9.87e-7 2.13e9 crc …  1996 1996… 36272 CRC … <df[… <df[… "{\"… b    
+#>  6   -13.8 9.71e-7 2.91e9 fuzz…  1996 1996… 42590 Fuzz… <df[… <df[… "{\"… a    
+#>  7   -13.9 9.43e-7 2.16e9 gapp…  1997 1997… 59194 Gapp… <df[… <df[… "{\"… a    
+#>  8   -13.9 9.21e-7 2.23e9 manu…  1992 1992… 28470 Manu… <df[… <df[… "{\"… <NA> 
+#>  9   -14.1 7.85e-7 2.15e9 stat…  1998 1998… 20944 Stat… <df[… <df[… "{\"… a    
+#> 10   -14.1 7.74e-7 2.99e9 part…  1995 1995…   405 Part… <df[… <df[… "{\"… p    
+#> # … with 337 more variables: PB <chr>, VFN <chr>, FP <chr>, BV <chr>,
+#> #   DOI <chr>, LP <chr>, V <chr>, I <chr>, IA.IndexLength <int>,
+#> #   IA.InvertedIndex.An <list>, IA.InvertedIndex.image <list>,
+#> #   IA.InvertedIndex.forming <list>, IA.InvertedIndex.device <list>,
+#> #   `IA.InvertedIndex.has:` <list>, IA.InvertedIndex.an <list>,
+#> #   IA.InvertedIndex.body <list>, IA.InvertedIndex.on <list>,
+#> #   IA.InvertedIndex.which <list>, IA.InvertedIndex.is <list>,
+#> #   IA.InvertedIndex.formed <list>, IA.InvertedIndex.in <list>,
+#> #   IA.InvertedIndex.a <list>, IA.InvertedIndex.state <list>,
+#> #   IA.InvertedIndex.the <list>, `IA.InvertedIndex.charged;` <list>,
+#> #   IA.InvertedIndex.charging <list>, IA.InvertedIndex.having <list>,
+#> #   IA.InvertedIndex.plural <list>, IA.InvertedIndex.discharge <list>,
+#> #   `IA.InvertedIndex.portions,` <list>, IA.InvertedIndex.and <list>,
+#> #   IA.InvertedIndex.by <list>, IA.InvertedIndex.discharging <list>,
+#> #   IA.InvertedIndex.of <list>, `IA.InvertedIndex.portions;` <list>,
+#> #   IA.InvertedIndex.control <list>, IA.InvertedIndex.section <list>,
+#> #   `IA.InvertedIndex.that,` <list>, IA.InvertedIndex.when <list>,
+#> #   `IA.InvertedIndex.body,` <list>, IA.InvertedIndex.operates <list>,
+#> #   IA.InvertedIndex.not <list>, IA.InvertedIndex.switches <list>,
+#> #   IA.InvertedIndex.between <list>, IA.InvertedIndex.operating <list>,
+#> #   IA.InvertedIndex.some <list>, IA.InvertedIndex.portions <list>,
+#> #   IA.InvertedIndex.decreasing <list>, IA.InvertedIndex.output <list>,
+#> #   IA.InvertedIndex.or <list>, IA.InvertedIndex.stopping <list>,
+#> #   IA.InvertedIndex.other <list>, IA.InvertedIndex.than <list>,
+#> #   IA.InvertedIndex.portions. <list>, IA.InvertedIndex.Setting <list>,
+#> #   IA.InvertedIndex.learning <list>, IA.InvertedIndex.problem <list>,
+#> #   IA.InvertedIndex.consistency <list>, IA.InvertedIndex.processes <list>,
+#> #   IA.InvertedIndex.bounds <list>, IA.InvertedIndex.rate <list>,
+#> #   IA.InvertedIndex.convergence <list>, IA.InvertedIndex.controlling <list>,
+#> #   IA.InvertedIndex.generalization <list>, IA.InvertedIndex.ability <list>,
+#> #   IA.InvertedIndex.constructing <list>, IA.InvertedIndex.algorithms <list>,
+#> #   IA.InvertedIndex.what <list>, IA.InvertedIndex.important <list>,
+#> #   `IA.InvertedIndex.theory?.` <list>, IA.InvertedIndex.CRC <list>,
+#> #   IA.InvertedIndex.handbook <list>, IA.InvertedIndex.chemistry <list>,
+#> #   IA.InvertedIndex.physics <list>, `IA.InvertedIndex.,` <list>,
+#> #   IA.InvertedIndex.کتابخانه <list>, IA.InvertedIndex.دیجیتال <list>,
+#> #   IA.InvertedIndex.جندی <list>, IA.InvertedIndex.شاپور <list>,
+#> #   IA.InvertedIndex.اهواز <list>, IA.InvertedIndex.The <list>,
+#> #   IA.InvertedIndex.BLAST <list>, IA.InvertedIndex.programs <list>,
+#> #   IA.InvertedIndex.are <list>, IA.InvertedIndex.widely <list>,
+#> #   IA.InvertedIndex.used <list>, IA.InvertedIndex.tools <list>,
+#> #   IA.InvertedIndex.for <list>, IA.InvertedIndex.searching <list>,
+#> #   IA.InvertedIndex.protein <list>, IA.InvertedIndex.DNA <list>,
+#> #   IA.InvertedIndex.databases <list>, IA.InvertedIndex.sequence <list>,
+#> #   IA.InvertedIndex.similarities. <list>, IA.InvertedIndex.For <list>,
+#> #   `IA.InvertedIndex.comparisons,` <list>, IA.InvertedIndex.variety <list>,
+#> #   `IA.InvertedIndex.definitional,` <list>,
+#> #   IA.InvertedIndex.algorithmic <list>, IA.InvertedIndex.statistical <list>, …
 ```
 
 ## Calchistogram
@@ -94,26 +120,27 @@ res <- ma_calchist(query = "And(Composite(AA.AuN=='jaime teevan'),Y>2012)",
    atts = c('Y', 'F.FN'))
 res$histograms$histogram
 #> [[1]]
-#>   value logprob count
-#> 1  2013 -17.240    18
-#> 2  2014 -17.332    13
-#> 3  2016 -17.818    16
-#> 4  2015 -17.832    14
-#> 5  2017 -18.709    12
-#> 6  2018 -19.532     3
+#>   value   logprob count
+#> 1  2013 -17.02788    19
+#> 2  2014 -17.16747    14
+#> 3  2015 -17.48570    15
+#> 4  2016 -17.58468    17
+#> 5  2017 -18.18386    12
+#> 6  2019 -18.32731     6
+#> 7  2018 -18.56648     7
 #> 
 #> [[2]]
-#>                         value logprob count
-#> 1            computer science -16.111    64
-#> 2                 data mining -16.771    28
-#> 3               crowdsourcing -16.992    23
-#> 4               search engine -17.076    16
-#> 5  human computer interaction -17.461    18
-#> 6       information retrieval -17.484    15
-#> 7                  multimedia -17.681    16
-#> 8            search analytics -18.065     5
-#> 9        knowledge management -18.184     8
-#> 10               social media -18.382     6
+#>                         value   logprob count
+#> 1            computer science -15.74012    81
+#> 2  human computer interaction -16.51284    35
+#> 3               crowdsourcing -16.68816    24
+#> 4              world wide web -16.70398    27
+#> 5               search engine -17.07613    14
+#> 6       information retrieval -17.23533    17
+#> 7                 data mining -17.31724    12
+#> 8                  multimedia -17.38984    19
+#> 9     artificial intelligence -17.76855     8
+#> 10           search analytics -17.87745     5
 ```
 
 ## Similarity
@@ -136,13 +163,13 @@ ma_similarity(s1, s2)
 ```r
 ma_abstract(query = "Y='19'...", count = 5)
 #> # A tibble: 5 x 2
-#>           Id abstract                                                     
-#>        <dbl> <chr>                                                        
-#> 1 2144634347 Molecular Cloning has served as the foundation of technical …
-#> 2 2596886333 ""                                                           
-#> 3 1856219842 Apresenta as metodologias desenvolvidas em grande escala par…
-#> 4 2339804494 ""                                                           
-#> 5 2158714788 The BLAST programs are widely used tools for searching prote…
+#>           Id abstract                                                           
+#>        <dbl> <chr>                                                              
+#> 1 2119113870 "An image forming device has: an image forming body on which an im…
+#> 2 2596886333 ""                                                                 
+#> 3 1856219842 ""                                                                 
+#> 4 2156909104 "Setting of the learning problem consistency of learning processes…
+#> 5 2132905138 "CRC handbook of chemistry and physics , CRC handbook of chemistry…
 ```
 
 
