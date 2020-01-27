@@ -9,3 +9,4 @@ notes.md
 ^codemeta\.json$
 .github
 ^revdep$
+Makefile
