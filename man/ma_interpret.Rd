@@ -4,8 +4,7 @@
 \alias{ma_interpret}
 \title{Interpret API}
 \usage{
-ma_interpret(query, count = 10, offset = 0, complete = TRUE,
-  key = NULL, ...)
+ma_interpret(query, count = 10, offset = 0, complete = TRUE, key = NULL, ...)
 }
 \arguments{
 \item{query}{(character) query terms}

@@ -6,12 +6,13 @@ Description: The 'Microsoft Academic Knowledge' API provides programmatic access
 	(<https://academic.microsoft.com/>). Includes methods matching all 'Microsoft
 	Academic' API routes, including search, graph search, text similarity, and
 	interpret natural language query string.
-Version: 0.4.3.9110
+Version: 0.4.3.94
 Authors@R: c(
     person("Scott", "Chamberlain", email = "myrmecocystus+r@gmail.com",
         role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1444-9135")),
     person("Christopher", "Baker", email = "chriscrewbaker@gmail.com", 
-        role = "ctb")
+        role = "ctb"),
+    person("rOpenSci", role = "fnd", comment = "https://ropensci.org")
     )
 License: MIT + file LICENSE
 LazyData: TRUE
@@ -30,7 +31,7 @@ Imports:
 Suggests:
     testthat,
     vcr (>= 0.2.2)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 X-schema.org-applicationCategory: Literature
 X-schema.org-keywords: text-mining, literature, pdf, xml, publications, citations, full-text
 X-schema.org-isPartOf: https://ropensci.org

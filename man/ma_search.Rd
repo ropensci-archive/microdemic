@@ -4,9 +4,16 @@
 \alias{ma_search}
 \title{Search - higher level method}
 \usage{
-ma_search(query, count = 10, offset = 0, orderby = NULL,
+ma_search(
+  query,
+  count = 10,
+  offset = 0,
+  orderby = NULL,
   atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"),
-  model = "latest", key = NULL, ...)
+  model = "latest",
+  key = NULL,
+  ...
+)
 }
 \arguments{
 \item{query}{(character) query terms}

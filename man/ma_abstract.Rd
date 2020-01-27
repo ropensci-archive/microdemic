@@ -4,8 +4,15 @@
 \alias{ma_abstract}
 \title{Fetch abstracts}
 \usage{
-ma_abstract(query, count = 10, offset = 0, orderby = NULL,
-  model = "latest", key = NULL, ...)
+ma_abstract(
+  query,
+  count = 10,
+  offset = 0,
+  orderby = NULL,
+  model = "latest",
+  key = NULL,
+  ...
+)
 }
 \arguments{
 \item{query}{(character) query terms}

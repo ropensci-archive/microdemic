@@ -48,7 +48,7 @@ This may vary by system and machine.
 See \code{?Startup} for details. It's likely your \code{.Renviron} file that
 is stored in your home directory. Or could be another environment
 variable holding file like \code{.zshrc} or \code{.bash_profile}. After saving the
-file, make sure to quit R, source that file like \code{source .Renviron},
+file, make sure to quit R, source that file like \verb{source .Renviron},
 then start R again. Or restart your RStudio session or similar for
 other R scenarios.
 }

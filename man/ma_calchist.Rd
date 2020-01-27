@@ -4,8 +4,15 @@
 \alias{ma_calchist}
 \title{CalcHistogram API}
 \usage{
-ma_calchist(query, count = 10, offset = 0, atts = c("Id", "AA.AuN",
-  "J.JN", "Ti", "Y", "E", "CC"), model = "latest", key = NULL, ...)
+ma_calchist(
+  query,
+  count = 10,
+  offset = 0,
+  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"),
+  model = "latest",
+  key = NULL,
+  ...
+)
 }
 \arguments{
 \item{query}{(character) query terms}
