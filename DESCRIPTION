@@ -31,7 +31,7 @@ Imports:
 Suggests:
     testthat,
     vcr (>= 0.2.2)
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1
 X-schema.org-applicationCategory: Literature
 X-schema.org-keywords: text-mining, literature, pdf, xml, publications, citations, full-text
 X-schema.org-isPartOf: https://ropensci.org

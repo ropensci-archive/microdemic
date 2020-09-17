@@ -5,9 +5,6 @@
 \alias{microdemic-package}
 \alias{microdemic}
 \title{Microsoft Academic Client}
-\description{
-Microsoft Academic Client
-}
 \section{Links}{
 
 \itemize{
