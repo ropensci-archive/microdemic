@@ -10,3 +10,4 @@ notes.md
 .github
 ^revdep$
 Makefile
+^LICENSE\.md$
