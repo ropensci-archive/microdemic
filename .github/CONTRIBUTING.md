@@ -23,4 +23,4 @@ Check out our [discussion forum](https://discuss.ropensci.org) if you think your
 
 ### Prefer to Email? 
 
-Private discussions over email don't help others - of course email is totally warranted if it's a sensitive problem of any kind.
+Do not email, open an issue.
