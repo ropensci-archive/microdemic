@@ -4,7 +4,10 @@
 \name{microdemic-package}
 \alias{microdemic-package}
 \alias{microdemic}
-\title{Microsoft Academic Client}
+\title{microdemic}
+\description{
+Microsoft Academic Client
+}
 \section{Links}{
 
 \itemize{
@@ -24,7 +27,6 @@
 \item \code{\link[=ma_calchist]{ma_calchist()}}
 \item \code{\link[=ma_evaluate]{ma_evaluate()}}
 \item \code{\link[=ma_interpret]{ma_interpret()}}
-\item \code{\link[=ma_similarity]{ma_similarity()}}
 \item \code{\link[=ma_abstract]{ma_abstract()}}
 \item \code{\link[=ma_graph_search]{ma_graph_search()}}
 }
@@ -65,6 +67,6 @@ other R scenarios.
 }
 
 \author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
+Scott Chamberlain
 }
 \keyword{package}

@@ -1,5 +1,5 @@
-#' Microsoft Academic Client
-#'
+#' @title microdemic
+#' @description Microsoft Academic Client
 #' @section Links:
 #'
 #' * web interface: https://academic.microsoft.com/
@@ -13,7 +13,6 @@
 #' * [ma_calchist()]
 #' * [ma_evaluate()]
 #' * [ma_interpret()]
-#' * [ma_similarity()]
 #' * [ma_abstract()]
 #' * [ma_graph_search()]
 #'
@@ -50,6 +49,6 @@
 #' @name microdemic-package
 #' @aliases microdemic
 #' @docType package
-#' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
+#' @author Scott Chamberlain
 #' @keywords package
 NULL
