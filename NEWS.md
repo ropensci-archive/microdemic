@@ -1,3 +1,15 @@
+microdemic 0.6.0
+================
+
+### NEW FEATURES
+
+* The `E` attribute we used heavily for data for various functions here has been dropped and its sub fields brought to the top level. Just internal changes - except for that the default fields in `ma_calchist`, `ma_evaluate`, and `ma_search` now do not include `E`. See the github issue for link for details  (#17)
+
+### DEFUNCT
+
+* `ma_similarity()` is now defunct as the service at least appears to be gone or down often enough its not worth supporting (#16)
+* `ma_graph_search()` is now defunct as the service at least appears to be gone or down often enough its not worth supporting (#18)
+
 microdemic 0.5.0
 ================
 

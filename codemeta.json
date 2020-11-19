@@ -10,14 +10,13 @@
   "codeRepository": "https://github.com/ropensci/microdemic",
   "issueTracker": "https://github.com/ropensci/microdemic/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.2 Patched (2019-12-12 r77564)",
+  "runtimePlatform": "R version 4.0.3 Patched (2020-11-02 r79396)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -140,13 +139,13 @@
       "sameAs": "https://CRAN.R-project.org/package=httpcode"
     }
   ],
-  "contIntegration": ["https://travis-ci.org/ropensci/microdemic", "https://codecov.io/gh/ropensci/microdemic"],
-  "developmentStatus": "https://www.repostatus.org/#wip",
+  "contIntegration": "https://codecov.io/gh/ropensci/microdemic",
+  "developmentStatus": "https://www.repostatus.org/#active",
   "releaseNotes": "https://github.com/ropensci/microdemic/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/microdemic/blob/master/README.md",
-  "fileSize": "73.362KB",
+  "fileSize": "0KB",
   "keywords": ["text-mining", "literature", "pdf", "xml", "publications", "citations", "full-text", "api-client", "scholarly-articles", "scholarly-metadata", "rstats", "r", "r-package"],
-  "relatedLink": "https://docs.ropensci.org/microdemic",
+  "relatedLink": ["https://docs.ropensci.org/microdemic", "https://docs.ropensci.org/microdemic/"],
   "contributor": {},
   "copyrightHolder": {},
   "funder": [

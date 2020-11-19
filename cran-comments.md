@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.6.2 Patched
-* ubuntu 14.04 (on travis-ci), R 3.6.2
+* local OS X install, R 4.0.3 Patched
+* ubuntu 16.04 (on travis-ci), R 4.0.3
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -15,7 +15,7 @@ found. Summary at <https://github.com/ropensci/microdemic/tree/master/revdep>
 
 ------
 
-This version fixes a bug, has better error messages, adds a new author.
+This version makes two functions defunct and makes changes aligning with remote API changes.
 
 Thanks!
 Scott Chamberlain
