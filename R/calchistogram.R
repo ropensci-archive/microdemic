@@ -8,7 +8,7 @@
 #' res$histograms$histogram
 #' }
 ma_calchist <- function(query, count = 10, offset = 0,
-  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"), model = "latest", 
+  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "CC"), model = "latest", 
   key = NULL, ...) {
 
   assert(model, "character")

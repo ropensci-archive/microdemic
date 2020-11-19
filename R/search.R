@@ -12,7 +12,7 @@
 #' ma_search(query = "Y='19'...")
 #' }
 ma_search <- function(query, count = 10, offset = 0, orderby = NULL,
-                      atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"),
+                      atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "CC"),
                       model = "latest", key = NULL, ...) {
 
   if (!is.null(atts)) atts <- paste0(atts, collapse = ",")

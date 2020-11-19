@@ -8,7 +8,7 @@ ma_calchist(
   query,
   count = 10,
   offset = 0,
-  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"),
+  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "CC"),
   model = "latest",
   key = NULL,
   ...

@@ -7,10 +7,8 @@ test_that("ma_evaluate works as expected", {
     aa <- ma_evaluate(query = "Y='19'...")
 
     expect_is(aa, "tbl_df")
-    # expect_named(aa, c('logprob', 'Id', 'Ti', 'Y', 'CC', 'AA', 'E', 'J.JN'))
-
     expect_type(aa$logprob, "double")
     expect_type(aa$Id, "double")
-    expect_type(aa$E, "character")
+    expect_type(aa$Ti, "character")
   }, preserve_exact_body_bytes = TRUE)
 })

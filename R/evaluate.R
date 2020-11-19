@@ -34,7 +34,7 @@
 #' ma_evaluate(x)
 #' }
 ma_evaluate <- function(query, count = 10, offset = 0, orderby = NULL,
-  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"), model = "latest", 
+  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "CC"), model = "latest", 
   key = NULL, ...) {
 
   assert(model, "character")
