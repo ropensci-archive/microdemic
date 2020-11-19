@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
 
 [![cran checks](https://cranchecks.info/badges/worst/microdemic)](https://cranchecks.info/pkgs/microdemic)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Build Status](https://travis-ci.org/ropensci/microdemic.svg?branch=master)](https://travis-ci.org/ropensci/microdemic)
+[![R-check](https://github.com/ropensci/microdemic/workflows/R-check/badge.svg)](https://github.com/ropensci/microdemic/actions?query=workflow%3AR-check)
 [![codecov](https://codecov.io/gh/ropensci/microdemic/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/microdemic)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/microdemic)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/microdemic)](https://cran.r-project.org/package=microdemic)
