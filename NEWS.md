@@ -4,7 +4,7 @@ microdemic 0.5.0
 ### NEW FEATURES
 
 * new author Christopher Baker (#13)
-* docs website at https://docs.ropensci.org/microdemic
+* docs website added
 
 ### MINOR IMPROVEMENTS
 
@@ -31,7 +31,7 @@ microdemic 0.3.0
 ### MINOR IMPROVEMENTS
 
 * Improve docs on how to use and get API keys (#3)
-* Change base URL from `westus.api.cognitive.microsoft.com` to `api.labs.cognitive.microsoft.com`. Because of this change, you need to get use an API key from a the microsoft labs website. Get a key at <https://labs.cognitive.microsoft.com/en-us/subscriptions> and see `?microdemic-package` for details on how to use it (#2)
+* Change base URL from `westus.api.cognitive.microsoft.com` to `api.labs.cognitive.microsoft.com`. Because of this change, you need to get use an API key from a the microsoft labs website. Get a key at some url and see `?microdemic-package` for details on how to use it (#2)
 
 
 microdemic 0.2.0

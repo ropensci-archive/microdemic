@@ -4,6 +4,7 @@
 ^\.travis\.yml$
 ^CODE_OF_CONDUCT\.md$
 ^README\.Rmd$
+^README\.md$
 cran-comments.md
 notes.md
 ^codemeta\.json$
