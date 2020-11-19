@@ -3,25 +3,33 @@
 #' @export
 #' @inheritParams ma_search
 #' @return data.frame, with two columns: `Id` and `abstract`
+#' @note articles without abstract are removed, so number returned
+#' may not equal number requestd with the `count` parameter
 #' @examples \dontrun{
 #' ma_abstract(query = "Y=2010", count = 10)
 #' ma_abstract(query = "Y=[2010, 2012)", count = 10)
 #' }
 ma_abstract <- function(query, count = 10, offset = 0, orderby = NULL,
                         model = "latest", key = NULL, ...) {
-  out <- ma_evaluate(query, count, offset, orderby, c("Id", "E"), 
-    model, key, ...)
-  tmp <- unname(
-    vapply(out$E, function(z) invabs2abs(jsonlite::fromJSON(z)$IA), ""))
-  tibble::as_tibble(data.frame(Id = out$Id, abstract = tmp, 
-    stringsAsFactors = FALSE))
+  args <- comp(list(expr = query, count = count, offset = offset,
+    orderby = orderby, attributes = "Id,IA", model = model))
+  res <- ma_HTTP("academic/v1.0/evaluate", args, key, parse=FALSE, ...)
+  ents <- jsonlite::fromJSON(res, FALSE)$entities
+  ents <- Filter(function(w) "IA" %in% names(w), ents)
+  tmp <- unname(vapply(ents, function(z) invabs2abs(z$IA), ""))
+  tibble::as_tibble(data.frame(Id = unlist(lapply(ents, "[[", "Id")),
+    abstract = tmp, stringsAsFactors = FALSE))
 }
 
 invabs2abs <- function(x) {
-  x$InvertedIndex <- lapply(x$InvertedIndex, `+`, 1)
+  invin <- list()
+  for (i in seq_along(x$InvertedIndex)) {
+    invin[[ names(x$InvertedIndex)[i] ]] <- unlist(x$InvertedIndex[[i]])
+  }
+  invin <- lapply(invin, `+`, 1)
   ab <- c()
-  for (i in names(x$InvertedIndex)) {
-    for (j in x$InvertedIndex[[i]]) {
+  for (i in names(invin)) {
+    for (j in invin[[i]]) {
       ab[j] <- i
     }
   }

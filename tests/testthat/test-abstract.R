@@ -9,7 +9,7 @@ test_that("ma_abstract works as expected", {
     expect_is(aa, "tbl_df")
     expect_is(aa$Id, "numeric")
     expect_is(aa$abstract, "character")
-    expect_equal(NROW(aa), 10)
+    expect_equal(NROW(aa), 9)
   }, preserve_exact_body_bytes = TRUE)
 
   vcr::use_cassette("ma_abstract_no_NAs", {

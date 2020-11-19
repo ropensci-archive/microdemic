@@ -37,6 +37,10 @@ data.frame, with two columns: \code{Id} and \code{abstract}
 \description{
 Fetch abstracts
 }
+\note{
+articles without abstract are removed, so number returned
+may not equal number requestd with the \code{count} parameter
+}
 \examples{
 \dontrun{
 ma_abstract(query = "Y=2010", count = 10)

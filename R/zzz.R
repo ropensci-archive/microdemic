@@ -3,7 +3,7 @@ comp <- function(x) Filter(Negate(is.null), x)
 ma_base <- function() "https://api.labs.cognitive.microsoft.com"
 
 ma_HTTP <- function(path, args, key, method = "GET", body = list(),
-                    encode = "form", ctype = NULL, ...) {
+                    encode = "form", ctype = NULL, parse = TRUE, ...) {
   key <- check_key(key)
   cli <- crul::HttpClient$new(
     url = ma_base(),
@@ -19,7 +19,7 @@ ma_HTTP <- function(path, args, key, method = "GET", body = list(),
   )
   raise_for_status2(res)
   txt <- res$parse("UTF-8")
-  jsonlite::fromJSON(txt, flatten = TRUE)
+  if (parse) jsonlite::fromJSON(txt, flatten = TRUE) else txt
 }
 
 check_key <- function(x) {
