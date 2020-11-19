@@ -25,7 +25,7 @@ ma_evaluate(
 \item{orderby}{(logical) column by which to order. default: none}
 
 \item{atts}{(character) fields to return, in a character vector. See
-\url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/entityattributes}
+https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/reference-entity-attributes
 for details.}
 
 \item{model}{(character) Name of the model that you wish to query. One
@@ -63,5 +63,5 @@ ma_evaluate(x)
 }
 \references{
 Query expression syntax
-https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/queryexpressionsyntax
+https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/reference-query-expression-syntax
 }

@@ -44,7 +44,7 @@ IT'S NOT CLEAR HOW TO QUERY AGAINST THIS API ROUTE
 }
 }
 \references{
-graph search method: \url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/graphsearchmethod}
-json search: \url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/jsonsearchsyntax}
-lambda search: \url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/lambdasearchsyntax}
+graph search method: https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/graphsearchmethod
+json search: https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/jsonsearchsyntax
+lambda search: https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/lambdasearchsyntax
 }

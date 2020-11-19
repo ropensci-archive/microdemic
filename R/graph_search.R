@@ -10,9 +10,9 @@
 #' IT'S NOT CLEAR HOW TO QUERY AGAINST THIS API ROUTE 
 #' (`academic/v1.0/graph/search`)
 #' @references
-#' graph search method: <https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/graphsearchmethod>
-#' json search: <https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/jsonsearchsyntax>
-#' lambda search: <https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/lambdasearchsyntax>
+#' graph search method: https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/graphsearchmethod
+#' json search: https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/jsonsearchsyntax
+#' lambda search: https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/lambdasearchsyntax
 #' @examples \dontrun{
 #' # x <- '{
 #' # "path": "/paper/AuthorIDs/author",

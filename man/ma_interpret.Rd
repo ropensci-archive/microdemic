@@ -38,5 +38,5 @@ ma_evaluate(expr)
 }
 }
 \references{
-\url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/interpretmethod}
+https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/reference-interpret-method
 }

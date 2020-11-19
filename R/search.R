@@ -4,10 +4,8 @@
 #' @inheritParams ma_evaluate
 #' @references
 #' https://academic.microsoft.com/
-#' https://azure.microsoft.com/en-us/services/cognitive-services/academic-knowledge/
-#' https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/home
-#' https://westus.dev.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d9001ca73072048922d97
-#' https://westus.dev.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d753be597ed16ac3ffc03
+#' https://www.microsoft.com/en-us/research/project/academic-knowledge/
+#' https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/introduction
 #' @examples \dontrun{
 #' ma_search(query = "Y='19'...")
 #' }

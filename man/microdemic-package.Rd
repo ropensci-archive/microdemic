@@ -15,8 +15,7 @@ Microsoft Academic Client
 \item API docs:
 }
 \itemize{
-\item https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/
-\item https://msr-apis.portal.azure-api.net/docs/services/academic-search-api/operations/565d9001ca73072048922d97
+\item https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/introduction
 }
 }
 

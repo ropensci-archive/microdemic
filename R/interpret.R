@@ -4,7 +4,7 @@
 #' @inheritParams ma_evaluate
 #' @param complete (logical) `TRUE` means that auto-completion suggestions
 #' are generated based on the grammar and graph data. default: `TRUE`
-#' @references <https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/interpretmethod>
+#' @references https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/reference-interpret-method
 #' @examples \dontrun{
 #' res <- ma_interpret(query = "papers by jaime'...")
 #' res$query

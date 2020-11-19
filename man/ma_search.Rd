@@ -25,7 +25,7 @@ ma_search(
 \item{orderby}{(logical) column by which to order. default: none}
 
 \item{atts}{(character) fields to return, in a character vector. See
-\url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/entityattributes}
+https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/reference-entity-attributes
 for details.}
 
 \item{model}{(character) Name of the model that you wish to query. One
@@ -46,8 +46,6 @@ ma_search(query = "Y='19'...")
 }
 \references{
 https://academic.microsoft.com/
-https://azure.microsoft.com/en-us/services/cognitive-services/academic-knowledge/
-https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/home
-https://westus.dev.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d9001ca73072048922d97
-https://westus.dev.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d753be597ed16ac3ffc03
+https://www.microsoft.com/en-us/research/project/academic-knowledge/
+https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/introduction
 }

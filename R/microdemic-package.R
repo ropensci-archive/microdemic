@@ -4,8 +4,7 @@
 #'
 #' * web interface: https://academic.microsoft.com/
 #' * API docs:
-#' - https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/
-#' - https://msr-apis.portal.azure-api.net/docs/services/academic-search-api/operations/565d9001ca73072048922d97
+#' - https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/introduction
 #'
 #' @section Package API:
 #'

@@ -6,7 +6,7 @@
 #' @param offset (intger) record number to start at. default: 0
 #' @param orderby (logical) column by which to order. default: none
 #' @param atts (character) fields to return, in a character vector. See
-#' <https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/entityattributes>
+#' https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/reference-entity-attributes
 #' for details.
 #' @param model (character) Name of the model that you wish to query. One 
 #' of 'latest' or 'beta-2015'. Default: latest
@@ -16,7 +16,7 @@
 #' @return a list of length two, with `expr` (character) and
 #' `entities` (data.frame)
 #' @references Query expression syntax
-#' https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/queryexpressionsyntax
+#' https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/reference-query-expression-syntax
 #' @examples \dontrun{
 #' # any numeric value that starts with 19
 #' ma_evaluate(query = "Y='19'...")
