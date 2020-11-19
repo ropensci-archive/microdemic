@@ -13,11 +13,10 @@
 #' * [ma_evaluate()]
 #' * [ma_interpret()]
 #' * [ma_abstract()]
-#' * [ma_graph_search()]
 #'
 #' @section Authentication:
-#' See <https://labs.cognitive.microsoft.com/en-us/subscriptions> to get
-#' an API key. Make sure you enable Academic Knowledge and. They should 
+#' See Microsoft Academic docs link above  to get
+#' an API key. Make sure you enable Academic Knowledge. They should 
 #' give you two API keys - use either one. You can always pass your API 
 #' key as a parameter to functions in `microdemic`, but we strongly 
 #' encourage you to set an environment variable, named `MICROSOFT_ACADEMIC_KEY`
