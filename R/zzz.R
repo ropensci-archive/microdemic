@@ -67,33 +67,8 @@ raise_for_status2 <- function(res) {
 parse_error_msg <- function(res) {
   txt <- res$parse("UTF-8")
   er_vec <- jsonlite::fromJSON(txt)
-  er_vec <- all_to_lower(er_vec)
-  # er_vec names used to be capitilized (e.g., "Error.Code", not "error.code").
-  # convert to lowercase just in case API goes back to using caps.
-  # names(er_vec) <- tolower(names(er_vec))
-  tmp <- list(
-    # the error.code element refers to a short error message, not the HTTP
-    # status code
-    message = er_vec$error$code,
-    explanation = er_vec$error$message
-  )
-  if (!is.null(er_vec$error$innererrors)) {
-    tmp$explanation <- er_vec$error$innererrors$message[1]
-  }
-  return(tmp)
-}
-
-# x = list(A = list(B = 6), C = list(D = 7, E = list(F = list(G = 7))))
-# all_to_lower(x)
-all_to_lower <- function(x) {
-  if (!is.null(names(x))) {
-    names(x) <- tolower(names(x))
-  }
-  if (is.list(x)) {
-    x <- lapply(x, all_to_lower)
-  }
-  if (is.data.frame(x)) {
-    names(x) <- tolower(names(x))
-  }
-  x
+  return(list(
+    message = er_vec$Message,
+    explanation = er_vec$InnerException$Message
+  ))
 }
